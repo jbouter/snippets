@@ -3342,4 +3342,4 @@ alias aptu='sudo apt-get update && sudo apt-get dist-upgrade'
 alias mountp='mount | column -t'
 
 # duh alias
-alias duh='duh -hsx * | sort -hr | head -n 6'
+alias duh='du -hsx * | sort -hr | head -n 6'

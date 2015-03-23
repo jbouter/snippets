@@ -3330,8 +3330,8 @@ if [ $(which dcfldd | grep -v "not found" | wc -c) -gt 0 ]; then
 fi
 
 # ls aliases
-alias ls='ls -F'
-alias l='ls -F'
+alias ls='ls -F --color=auto'
+alias l='ls -F --color=auto'
 alias ll='ls -l'
 alias la='ls -las'
 

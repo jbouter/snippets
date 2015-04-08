@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Small bash script to updat the Telegram desktop client.
-# I wrote this because in-client updates can sometimes brick the configuration files
+TELEDOWNLOAD="~/Downloads/telegram-upgrade.tar.xz"
+TELEPATH="~/.local/share/"
 
-wget "https://tdesktop.com/linux" -O ~/Downloads/telegram-upgrade.tar.xz
+wget "https://tdesktop.com/linux" -O $TELEDOWNLOAD
 
-cd ~/.local/share/
+cd $TELEPATH
 
-tar -xf ~/Downloads/telegram-upgrade.tar.xz
+tar -xf $TELEDOWNLOAD
 
-rm ~/Downloads/telegram-upgrade.tar.xz
+rm $TELEDOWNLOAD
 
 echo "All done"
 

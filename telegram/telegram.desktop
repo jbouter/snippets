@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Telegram Messenger
+GenericName=Internet Messenger
+Comment=Chat using telegram
+Exec=/home/kyentei/.local/bin/Telegram
+Icon=/home/kyentei/.local/share/telegram-icon/telegram.png
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=Network;InstantMessaging;

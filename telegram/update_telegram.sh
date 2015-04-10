@@ -1,8 +1,7 @@
 #!/bin/bash
 
-TELEDOWNLOAD="~/Downloads/telegram-upgrade.tar.xz"
-TELEPATH="~/.local/share/"
-
+TELEDOWNLOAD=~/Downloads/telegram-upgrade.tar.xz
+TELEPATH=~/.local/share/
 
 # Do the downloading part
 wget "https://tdesktop.com/linux" -O $TELEDOWNLOAD

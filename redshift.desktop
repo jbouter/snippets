@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=redshift
+GenericName=redshift
+Comment=Ease your eyes
+Exec=redshift -l 53.2:6.5 -t 6400:5500
+StartupNotify=true
+Terminal=false
+Type=Application

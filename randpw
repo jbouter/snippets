@@ -1,0 +1,12 @@
+#!/bin/bash
+
+pwlength=9
+
+if [ $1 -lt 64 ] && [ $1 -ge 8 ]; then
+  pwlength=$1
+else
+  echo "Don't be an idiot :-)" 1>&2
+  exit 1
+fi
+
+{ < /dev/urandom tr -dc _A-Za-z0-9 | head -c$pwlength;echo;}

@@ -11,4 +11,4 @@ if [ $1 ]; then
   fi
 fi
 
-{ < /dev/urandom tr -dc _A-Za-z0-9 | head -c$pwlength;echo;}
+dd if=/dev/urandom bs=1 count=64 status=none | tr -dc _A-Za-z0-9 | head -c $pwlength

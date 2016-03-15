@@ -44,6 +44,12 @@ bindsym $mod+b exec chromium
 # Network Managing Applet
 exec --no-startup-id nm-applet
 
+# Gnome Keyring
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+
+# Owncloud client
+exec --no-startup-id owncloud
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume

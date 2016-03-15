@@ -46,6 +46,9 @@ bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/
 # Network Managing Applet
 exec --no-startup-id nm-applet
 
+# RedShift: ease the eyes
+exec --no-startup-id redshift -l 53.2:6.5 -t 6500:4500
+
 # Gnome Keyring
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 

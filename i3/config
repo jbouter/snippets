@@ -40,6 +40,7 @@ bindsym $mod+d exec dmenu_run
 
 bindsym $mod+Ctrl+l exec i3lock
 bindsym $mod+b exec chromium
+bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/'
 
 # Network Managing Applet
 exec --no-startup-id nm-applet

@@ -1,0 +1,7 @@
+owncloud
+network-manager-applet
+terminator
+chromium
+feh
+scrot
+alsa-utils

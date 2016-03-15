@@ -5,4 +5,4 @@ chromium
 feh
 scrot
 alsa-utils
-roboto-mono
+overpass(ttf)

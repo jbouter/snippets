@@ -56,7 +56,7 @@ exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 exec --no-startup-id owncloud
 
 # Set wallpaper
-exec --no-startup-id feh --bg-fill ~/documents/owncloud/wallpapers/dark-floral-pattern.jpg
+exec --no-startup-id ~/.config/i3/setwallpaper.sh
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ #increase sound volume

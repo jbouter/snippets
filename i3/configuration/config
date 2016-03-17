@@ -49,6 +49,9 @@ exec --no-startup-id nm-applet
 # RedShift: ease the eyes
 exec --no-startup-id redshift -l 53.2:6.5 -t 6500:4500
 
+# Keyboard layout: US International + ALT-GR dead keys
+exec --no-startup-id setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
+
 # Gnome Keyring
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 

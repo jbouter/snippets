@@ -6,5 +6,5 @@ scrot
 alsa-utils
 redshift
 rxvt-unicode
-iTerm2-colors (git cloned)
+iTerm2-colors (git cloned) (https://github.com/mbadolato/iTerm2-Color-Schemes)
 overpass(ttf)

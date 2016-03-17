@@ -13,8 +13,11 @@
 # Installation of i3 + urxvt theme
 There are three basic directories. My installation is as follows
 
+
 The configuration directory is symlinked to ~/.config/i3
+
 urxvt/Xdefaults is symlinked to ~/.Xdefaults
+
 As such:
 ```
 ln -sf configuration ~/.config/i3
@@ -23,7 +26,10 @@ ln -sf urxvt/Xdefaults ~/.Xdefaults
 
 # Getting a timed wallpaper (I use my buck wallpapers, not included)
 Adjust your username in systemd/changewallpaper.service (now set to jeffrey)
+
 copy the two files in the systemd directory to /usr/lib/systemd/system and enable them
+
+
 As such:
 ```
 sudo cp systemd/changewallpaper.* /usr/lib/systemd/system

@@ -1,9 +1,10 @@
 owncloud
 network-manager-applet
-terminator
 chromium
 feh
 scrot
 alsa-utils
 redshift
+rxvt-unicode
+iTerm2-colors (git cloned)
 overpass(ttf)

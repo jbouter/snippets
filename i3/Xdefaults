@@ -1,0 +1,102 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+! Fonts
+URxvt.allow_bold:           false
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+URxvt*font: xft:Roboto Mono:pixelsize=14
+URxvt*boldFont: xft:Roboto Mono:pixelsize=14
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Broadcast.xrdb"
+Rxvt*color0:       Ansi_0_Color
+Rxvt*color1:       Ansi_1_Color
+Rxvt*color2:       Ansi_2_Color
+Rxvt*color3:       Ansi_3_Color
+Rxvt*color4:       Ansi_4_Color
+Rxvt*color5:       Ansi_5_Color
+Rxvt*color6:       Ansi_6_Color
+Rxvt*color7:       Ansi_7_Color
+Rxvt*color8:       Ansi_8_Color
+Rxvt*color9:       Ansi_9_Color
+Rxvt*color10:      Ansi_10_Color
+Rxvt*color11:      Ansi_11_Color
+Rxvt*color12:      Ansi_12_Color
+Rxvt*color13:      Ansi_13_Color
+Rxvt*color14:      Ansi_14_Color
+Rxvt*color15:      Ansi_15_Color
+Rxvt*colorBD:      Bold_Color
+Rxvt*colorIT:      Italic_Color
+Rxvt*colorUL:      Underline_Color
+Rxvt*foreground:   Foreground_Color
+Rxvt*background:   Background_Color
+Rxvt*cursorColor:  Cursor_Color
+
+XTerm*color0:      Ansi_0_Color
+XTerm*color1:      Ansi_1_Color
+XTerm*color2:      Ansi_2_Color
+XTerm*color3:      Ansi_3_Color
+XTerm*color4:      Ansi_4_Color
+XTerm*color5:      Ansi_5_Color
+XTerm*color6:      Ansi_6_Color
+XTerm*color7:      Ansi_7_Color
+XTerm*color8:      Ansi_8_Color
+XTerm*color9:      Ansi_9_Color
+XTerm*color10:     Ansi_10_Color
+XTerm*color11:     Ansi_11_Color
+XTerm*color12:     Ansi_12_Color
+XTerm*color13:     Ansi_13_Color
+XTerm*color14:     Ansi_14_Color
+XTerm*color15:     Ansi_15_Color
+XTerm*colorBD:     Bold_Color
+XTerm*colorIT:     Italic_Color
+XTerm*colorUL:     Underline_Color
+XTerm*foreground:  Foreground_Color
+XTerm*background:  Background_Color
+XTerm*cursorColor: Cursor_Color

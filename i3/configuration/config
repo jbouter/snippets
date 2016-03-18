@@ -39,8 +39,13 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
+# Bind mod+ctrl+l to lockscreen
 bindsym $mod+Ctrl+l exec sh ~/.config/i3/i3lock.sh
+
+# Bind mod+b to browser
 bindsym $mod+b exec chromium
+
+# Bind PrintScrn button to scrot
 bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/'
 
 # Network Managing Applet
@@ -57,6 +62,9 @@ exec --no-startup-id setxkbmap -rules evdev -model evdev -layout us -variant alt
 
 # Gnome Keyring
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+
+# Fix mouse speed (useful after gnome daemon kicks in)
+exec --no-startup-id xset m 0.1 1
 
 # Owncloud client
 exec --no-startup-id owncloud

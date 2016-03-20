@@ -35,3 +35,9 @@ As such:
 sudo cp systemd/changewallpaper.* /usr/lib/systemd/system
 sudo systemctl enable changewallpaper.timer
 ```
+The wallpaper script depends on DISPLAY to be set in order to work with systemd. This defaults to ":0.0", but some screens are on a different display.
+
+In order to make this work, try the following whilst logged in to a graphical desktop:
+```
+echo $DISPLAY > ~/.config/i3/display.txt
+```

@@ -4,6 +4,7 @@ if [ -f ~/.config/i3/display.txt ]; then
   SETDISPLAY=$(cat ~/.config/i3/display.txt)
 else
   SETDISPLAY=":0.0"
+fi
 
 # Check whether it's after 6 in the evening or not
 if [ $(date +%H) -ge 18 ]; then

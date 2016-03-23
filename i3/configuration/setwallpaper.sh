@@ -7,7 +7,7 @@ else
 fi
 
 # Check whether it's after 6 in the evening or not
-if [ $(date +%H) -ge 18 ]; then
+if [ $(date +%H) -ge 18 ] || [ $(date +%H) -le 6 ]; then
   # It's nighttime, set the purple buck wallpaper
   DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/buck-night.png
 else

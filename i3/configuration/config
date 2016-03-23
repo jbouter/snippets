@@ -27,6 +27,12 @@ font pango: Overpass Regular 11
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+
+# Set i3-gaps specific stuff
+for_window [class="^.*"] border pixel 0
+gaps inner 5
+gaps outer 5
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 

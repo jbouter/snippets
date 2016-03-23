@@ -31,7 +31,7 @@ font pango: Overpass Regular 11
 # Set i3-gaps specific stuff
 for_window [class="^.*"] border pixel 0 # disable borders
 smart_gaps on # Only use gaps when >1 container
-gaps inner 5 # pxls between containers
+gaps inner 10 # pxls between containers
 gaps outer 5 # pxls between edge of screen
 
 # Use Mouse+$mod to drag floating windows to their wanted position

@@ -6,11 +6,16 @@ else
   SETDISPLAY=":0.0"
 fi
 
-# Check whether it's after 6 in the evening or not
-if [ $(date +%H) -ge 18 ] || [ $(date +%H) -le 6 ]; then
-  # It's nighttime, set the purple buck wallpaper
-  DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/buck-night.png
-else
-  # It's daytime, set the blue buck wallpaper
-  DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/buck-day.png
+# Between 8 PM and 4 AM, I want the 'night' wallpaper
+if [ $(date +%H) -ge 20 ] || [ $(date +%H) -lt 4 ]; then
+  DAYTIME=night
+# Between 4 AM and 12 PM, I want the 'morning' wallpaper
+elif [ $(date +%H) -ge 4 ] || [ $(date +%H) -lt 12 ]; then
+  DAYTIME=morning
+# Between 12 PM and 8 PM, I want the 'afternoon' wallpaper
+elif [ $(date +%H) -ge 12 ] || [ $(date +%H) -lt 20 ]; then
+  DAYTIME=afternoon
 fi
+
+# Set the actual wallpaper
+DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpaper/tree_$DAYTIME.jpg

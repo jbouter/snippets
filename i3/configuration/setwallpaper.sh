@@ -18,4 +18,4 @@ elif [ $(date +%H) -ge 12 ] || [ $(date +%H) -lt 20 ]; then
 fi
 
 # Set the actual wallpaper
-DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpaper/tree_$DAYTIME.jpg
+DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/tree_$DAYTIME.jpg

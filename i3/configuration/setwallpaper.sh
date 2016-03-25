@@ -7,6 +7,13 @@ else
 fi
 
 HOUR=$(date +%H)
-WALL=$(($HOUR/2*2))
+if [ ${HOUR:0:1} -eq 0 ]; then
+  HOUR=${HOUR:1:2}
+  WALL="0$(($HOUR/2*2))"
+else
+  WALL=$(($HOUR/2*2))
+fi
+
+
 
 DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/time_based/$WALL.png

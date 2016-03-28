@@ -70,9 +70,6 @@ exec --no-startup-id setxkbmap -rules evdev -model evdev -layout us -variant alt
 # Gnome Keyring
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-keyring-daemon
 
-# Fix mouse speed (useful after gnome daemon kicks in)
-exec --no-startup-id DISPLAY=:0 xset m 0.1 1
-
 # Owncloud client
 exec --no-startup-id owncloud
 

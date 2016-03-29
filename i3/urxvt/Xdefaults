@@ -12,9 +12,8 @@ Xft.lcdfilter: lcddefault
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+! More info @ 
+!          http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
 !-------------------------------------------------------------------------------
 
 URxvt.depth:                32
@@ -54,6 +53,11 @@ URxvt.cursorUnderline:      false
 
 ! Pointer
 URxvt.pointerBlank:         true
+
+!-------------------------------------------------------------------------------
+! URxvt Colour Scheme
+! More info @ https://github.com/mbadolato/iTerm2-Color-Schemes
+!-------------------------------------------------------------------------------
 
 #include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Broadcast.xrdb"
 Rxvt*color0:       Ansi_0_Color

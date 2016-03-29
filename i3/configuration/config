@@ -59,7 +59,7 @@ bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/
 exec --no-startup-id nm-applet
 
 # RedShift: ease the eyes
-exec --no-startup-id redshift -l 53.2:6.5 -t 6500:4500
+exec --no-startup-id redshift -l 53.2:6.5 -t 6500:4200
 
 # Start Compton: Compositing manager
 exec --no-startup-id compton --daemon

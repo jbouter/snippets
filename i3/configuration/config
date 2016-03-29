@@ -61,6 +61,9 @@ exec --no-startup-id nm-applet
 # RedShift: ease the eyes
 exec --no-startup-id redshift -l 53.2:6.5 -t 6500:4500
 
+# Start Compton: Compositing manager
+exec --no-startup-id compton --daemon
+
 # Allow the proper spawning of urxvt
 exec --no-startup-id xrdb ~/.Xdefaults
 

@@ -10,6 +10,7 @@
 * iTerm2-colors (git cloned via https://github.com/mbadolato/iTerm2-Color-Schemes)
 * overpass (font used in configuration)
 * compton
+* networkmanager-dmenu-git (AUR) (github: https://github.com/firecat53/nmcli-dmenu)
 
 # Installation of i3 + urxvt theme
 There are three basic directories. My installation is as follows

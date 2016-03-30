@@ -46,6 +46,9 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
+# Start dmenu-nmcli (WiFi launcher)
+bindsym $mod+n exec nmcli_dmenu
+
 # Bind mod+ctrl+l to lockscreen
 bindsym $mod+Ctrl+l exec sh ~/.config/i3/i3lock.sh
 

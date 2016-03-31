@@ -11,6 +11,8 @@
 * overpass (font used in configuration)
 * Ubuntu font (previously used Roboto)
 * compton
+* dunst (notification daemon)
+* YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
 * networkmanager-dmenu-git (AUR) (github: https://github.com/firecat53/nmcli-dmenu)
 
 # Installation of i3 + urxvt theme

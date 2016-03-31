@@ -61,6 +61,12 @@ bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/
 # Network Managing Applet
 exec --no-startup-id nm-applet
 
+# Dunst daemon
+exec --no-startup-id dunst ~/.config/i3/dunstrc
+
+# YeaLink Monitor
+exec --no-startup-id python2 ~/documents/scripts/yealink-monitor.py
+
 # RedShift: ease the eyes
 exec --no-startup-id redshift -l 53.2:6.5 -t 6500:4200
 

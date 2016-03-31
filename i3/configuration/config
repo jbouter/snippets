@@ -62,7 +62,7 @@ bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/
 exec --no-startup-id nm-applet
 
 # Dunst daemon
-exec --no-startup-id dunst ~/.config/i3/dunstrc
+exec --no-startup-id dunst -config ~/.config/i3/dunstrc
 
 # YeaLink Monitor
 exec --no-startup-id python2 ~/documents/scripts/yealink-monitor.py

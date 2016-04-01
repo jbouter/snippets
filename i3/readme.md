@@ -10,6 +10,7 @@
 * iTerm2-colors (git cloned via https://github.com/mbadolato/iTerm2-Color-Schemes)
 * overpass (font used in configuration)
 * Ubuntu font (previously used Roboto)
+* Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton
 * dunst (notification daemon)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)

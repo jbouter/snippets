@@ -163,7 +163,7 @@ set $6   6: 
 set $7   7: 
 set $8   8: 
 set $9   9: 
-set $10  10
+set $10  10: 
  
 # Switch to workspace
 bindsym $mod+1 workspace $1

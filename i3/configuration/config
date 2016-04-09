@@ -80,7 +80,7 @@ exec --no-startup-id xrdb ~/.Xdefaults
 exec --no-startup-id setxkbmap -rules evdev -model evdev -layout us -variant altgr-intl
 
 # Gnome Keyring
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-keyring-daemon
+exec --no-startup-id /usr/bin/gnome-keyring-daemon
 
 # Owncloud client
 exec --no-startup-id owncloud

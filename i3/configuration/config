@@ -59,7 +59,7 @@ bindsym $mod+b exec chromium
 bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/'
 
 # Network Managing Applet
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Dunst daemon
 #exec --no-startup-id dunst -config ~/.config/i3/dunstrc

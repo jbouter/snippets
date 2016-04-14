@@ -234,7 +234,7 @@ bar {
 					separator  #ff471a
 
 					# Type             border  background font
-					focused_workspace  #ff471a #293133 #ffffff
+          focused_workspace  #293133 #ff471a #293133
 					active_workspace   #2d3739 #2e3638 #ffffff
 					inactive_workspace #22292a #171b1c #888888
 					urgent_workspace   #ff471a #e62e00 #ffffff

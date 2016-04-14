@@ -229,15 +229,15 @@ bar {
         font pango: Fira Sans, FontAwesome Regular 12
 				colors {
 					# Whole color settings
-					background #000000
+					background #0b0e0e
 					statusline #ffffff
-					separator  #666666
+					separator  #ff471a
 
 					# Type             border  background font
-					focused_workspace  #008fff #007fff #ffffff
-					active_workspace   #333333 #5f676a #ffffff
-					inactive_workspace #333333 #222222 #888888
-					urgent_workspace   #aa0000 #990000 #ffffff
+					focused_workspace  #ff471a #293133 #ffffff
+					active_workspace   #2d3739 #2e3638 #ffffff
+					inactive_workspace #22292a #171b1c #888888
+					urgent_workspace   #008fff #007fff #ffffff
 				}
         status_command i3status -c ~/.config/i3/i3status.conf
         position top

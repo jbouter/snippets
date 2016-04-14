@@ -1,4 +1,4 @@
-if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="blue"; fi
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="yellow"; fi
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 PROMPT='[%{$fg[$NCOLOR]%}%n%{$reset_color%}@%{$reset_color%}%m\

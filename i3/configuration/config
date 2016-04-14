@@ -237,7 +237,7 @@ bar {
 					focused_workspace  #ff471a #293133 #ffffff
 					active_workspace   #2d3739 #2e3638 #ffffff
 					inactive_workspace #22292a #171b1c #888888
-					urgent_workspace   #008fff #007fff #ffffff
+					urgent_workspace   #ff471a #e62e00 #ffffff
 				}
         status_command i3status -c ~/.config/i3/i3status.conf
         position top

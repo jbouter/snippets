@@ -88,6 +88,18 @@ exec --no-startup-id owncloud
 # Set wallpaper
 exec --no-startup-id ~/.config/i3/setwallpaper.sh
 
+# Set up the default workspace layout
+# 3 terminals on workspace 1
+exec --no-startup-id i3-msg 'workspace $1; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'workspace $1; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'workspace $1; exec i3-sensible-terminal'
+# Evolution in workspace 4
+exec --no-startup-id i3-msg 'workspace $4; exec evolution'
+# Single terminal in workspace 5
+exec --no-startup-id i3-msg 'workspace $5; exec i3-sensible-terminal'
+# Thunar in workspace 10
+exec --no-startup-id i3-msg 'workspace $10; exec thunar'
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- #decrease sound volume

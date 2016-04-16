@@ -97,6 +97,8 @@ exec --no-startup-id i3-msg 'workspace $1; exec i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace $4; exec evolution'
 # Single terminal in workspace 5
 exec --no-startup-id i3-msg 'workspace $5; exec i3-sensible-terminal'
+# Clementine in workspace 9
+exec --no-startup-id i3-msg 'workspace $9; exec clementine'
 # Thunar in workspace 10
 exec --no-startup-id i3-msg 'workspace $10; exec thunar'
 
@@ -174,7 +176,7 @@ set $5   5: 
 set $6   6: 
 set $7   7: 
 set $8   8: 
-set $9   9: 
+set $9   9: 
 set $10  10: 
  
 # Switch to workspace

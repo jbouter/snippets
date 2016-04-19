@@ -241,18 +241,18 @@ bindsym $mod+r mode "resize"
 bar {
 
         font pango: Fira Sans, FontAwesome Regular 12
-				colors {
-					# Whole color settings
-					background #0b0e0e
-					statusline #ffffff
-					separator  #ff471a
+        colors {
+          # Whole color settings
+          background #0b0e0e
+          statusline #ffffff
+          separator  #ff471a
 
-					# Type             border  background font
+          # Type             border  background font
           focused_workspace  #293133 #ff471a #293133
-					active_workspace   #2d3739 #2e3638 #ffffff
-					inactive_workspace #22292a #171b1c #888888
-					urgent_workspace   #ff471a #e62e00 #ffffff
-				}
+          active_workspace   #2d3739 #2e3638 #ffffff
+          inactive_workspace #22292a #171b1c #888888
+          urgent_workspace   #ff471a #e62e00 #ffffff
+        }
         status_command i3status -c ~/.config/i3/i3status.conf
         position top
         workspace_buttons yes

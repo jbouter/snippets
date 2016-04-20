@@ -13,6 +13,7 @@
 * Fira fonts (otf-fira-mono and otf-fira-sans)
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton
+* py3status (AUR: py3status & py3status-modules)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
 
 # Installation of i3 + urxvt theme

@@ -18,8 +18,8 @@ Xft.lcdfilter: lcddefault
 
 URxvt.depth:                32
 URxvt.geometry:             90x30
-URxvt.transparent:          true
-URxvt.shading:              10
+! URxvt.transparent:          true
+! URxvt.shading:              10
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         false
 ! URxvt.visualBell:           true
@@ -59,7 +59,7 @@ URxvt.pointerBlank:         true
 ! More info @ https://github.com/mbadolato/iTerm2-Color-Schemes
 !-------------------------------------------------------------------------------
 
-#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Broadcast.xrdb"
+#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Material.xrdb"
 Rxvt*color0:       Ansi_0_Color
 Rxvt*color1:       Ansi_1_Color
 Rxvt*color2:       Ansi_2_Color

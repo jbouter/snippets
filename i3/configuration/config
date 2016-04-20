@@ -43,10 +43,10 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -l 5 -i -p 'run>' -nb '#eeeeee' -nf '#2c2c2c' -sb '#17838e' -sf '#eeeeee' -fn 'Fira Mono-12'
+# start rofi(a program launcher)
+bindsym $mod+d exec rofi -show run -fg "#2c2c2c" -bg "#eeeeee" -hlfg "#eeeeee" -hlbg "#17838e" -opacity 90 -font "Fira Mono 12" -width 40 -lines 5
 
-# Start dmenu-nmcli (WiFi launcher)
+# Start dmenu-nmcli (Network Manager in dmenu/rofi)
 bindsym $mod+n exec nmcli_dmenu
 
 # Bind mod+ctrl+l to lockscreen

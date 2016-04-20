@@ -22,10 +22,13 @@ The configuration directory is symlinked to ~/.config/i3
 
 urxvt/Xdefaults is symlinked to ~/.Xdefaults
 
+networkmanager-dmenu is symlinked to ~/.config/networkmanager-dmenu
+
 As such:
 ```
 ln -sf configuration ~/.config/i3
 ln -sf urxvt/Xdefaults ~/.Xdefaults
+ln -sf networkmanager-dmenu ~/.config/networkmanager-dmenu
 ```
 
 # Getting a timed wallpaper (I use my buck wallpapers, not included)

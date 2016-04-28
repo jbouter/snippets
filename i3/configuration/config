@@ -53,7 +53,7 @@ bindsym $mod+n exec nmcli_dmenu
 bindsym $mod+Ctrl+l exec sh ~/.config/i3/i3lock.sh
 
 # Bind mod+b to browser
-bindsym $mod+b exec chromium
+bindsym $mod+b exec firefox
 
 # Bind PrintScrn button to scrot
 bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/'
@@ -167,8 +167,8 @@ bindsym $mod+a focus parent
 
 # Initialise workspace
 set $1   1: 
-set $2   2: 
-set $3   3: 
+set $2   2: 
+set $3   3: 
 set $4   4: 
 set $5   5: 
 set $6   6: 

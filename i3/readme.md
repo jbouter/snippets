@@ -3,7 +3,7 @@
 * rofi (or dmenu, but then you need to change the config around)
 * network-manager-applet (gets started in tray)
 * networkmanager-dmenu-git (AUR) (github: https://github.com/firecat53/nmcli-dmenu)
-* chromium (used as mod+b browser launcher)
+* firefox (used as mod+b browser launcher)
 * feh (for setting wallpaper)
 * scrot (for screenshotting + setting lockscreen)
 * alsa-utils (for volume control)

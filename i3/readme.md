@@ -22,14 +22,14 @@ There are three basic directories. My installation is as follows
 
 The configuration directory is symlinked to ~/.config/i3
 
-urxvt/Xdefaults is symlinked to ~/.Xdefaults
+urxvt/Xresources is symlinked to ~/.Xresources
 
 networkmanager-dmenu is symlinked to ~/.config/networkmanager-dmenu
 
 As such:
 ```
 ln -sf configuration ~/.config/i3
-ln -sf urxvt/Xdefaults ~/.Xdefaults
+ln -sf urxvt/Xresources ~/.Xresources
 ln -sf networkmanager-dmenu ~/.config/networkmanager-dmenu
 ```
 

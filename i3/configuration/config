@@ -34,37 +34,12 @@ for_window [class="^.*"] border pixel 0 # disable borders
 gaps inner 10 # pxls between containers
 gaps outer 5 # pxls between edge of screen
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+#
+# Start custom daemons
+#
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-# start rofi(a program launcher)
-bindsym $mod+d exec rofi -show run -fg "#2c2c2c" -bg "#eeeeee" -hlfg "#eeeeee" -hlbg "#17838e" -opacity 90 -font "Fira Mono 12" -width 40 -lines 5
-
-# Start dmenu-nmcli (Network Manager in dmenu/rofi)
-bindsym $mod+n exec nmcli_dmenu
-
-# Bind mod+ctrl+l to lockscreen
-bindsym $mod+Ctrl+l exec sh ~/.config/i3/i3lock.sh
-# Start a timer to automatically lock
-exec --no-startup-id xautolock -time 10 -locker '~/.config/i3/i3lock.sh'
-
-# Bind mod+b to browser
-bindsym $mod+b exec firefox
-
-# Bind PrintScrn button to scrot
-bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/'
-
-# Network Managing Applet
-#exec --no-startup-id nm-applet
-
-# Dunst daemon
-#exec --no-startup-id dunst -config ~/.config/i3/dunstrc
+# urxvt daemon
+exec --no-startup-id urxvtd -q -f -o
 
 # YeaLink Monitor
 exec --no-startup-id python2 ~/documents/scripts/yealink-monitor.py
@@ -90,15 +65,46 @@ exec --no-startup-id owncloud
 # Set wallpaper
 exec --no-startup-id ~/.config/i3/setwallpaper.sh
 
+#
+# Set Keybindings
+# 
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec urxvtc
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start rofi(a program launcher)
+bindsym $mod+d exec rofi -show run -fg "#2c2c2c" -bg "#eeeeee" -hlfg "#eeeeee" -hlbg "#17838e" -opacity 90 -font "Fira Mono 12" -width 40 -lines 5
+
+# Start dmenu-nmcli (Network Manager in dmenu/rofi)
+bindsym $mod+n exec nmcli_dmenu
+
+# Bind mod+ctrl+l to lockscreen
+bindsym $mod+Ctrl+l exec sh ~/.config/i3/i3lock.sh
+# Start a timer to automatically lock
+exec --no-startup-id xautolock -time 10 -locker '~/.config/i3/i3lock.sh'
+
+# Bind mod+b to browser
+bindsym $mod+b exec firefox
+
+# Bind PrintScrn button to scrot
+bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/'
+
+
 # Set up the default workspace layout
 # 3 terminals on workspace 1
-exec --no-startup-id i3-msg 'workspace $1; exec i3-sensible-terminal'
-exec --no-startup-id i3-msg 'workspace $1; exec i3-sensible-terminal'
-exec --no-startup-id i3-msg 'workspace $1; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
+exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
+exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
 # Evolution in workspace 4
 exec --no-startup-id i3-msg 'workspace $4; exec evolution'
 # Single terminal in workspace 5
-exec --no-startup-id i3-msg 'workspace $5; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'workspace $5; exec urxvtc'
 # Thunar in workspace 10
 exec --no-startup-id i3-msg 'workspace $10; exec thunar'
 

@@ -65,7 +65,7 @@ URxvt.pointerBlank:         true
 ! More info @ https://github.com/mbadolato/iTerm2-Color-Schemes
 !-------------------------------------------------------------------------------
 
-#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Material.xrdb"
+#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/WarmNeon.xrdb"
 Rxvt*color0:       Ansi_0_Color
 Rxvt*color1:       Ansi_1_Color
 Rxvt*color2:       Ansi_2_Color

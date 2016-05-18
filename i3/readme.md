@@ -11,6 +11,8 @@
 * redshift (to ease your eyes after it gets dark)
 * rxvt-unicode (terminal emulator, basic config is in urxvt directory)
 * iTerm2-colors (git cloned via https://github.com/mbadolato/iTerm2-Color-Schemes)
+* neovim
+* xsel (for neovim screenshots)
 * Fira fonts (otf-fira-mono and otf-fira-sans)
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton

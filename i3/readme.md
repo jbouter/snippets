@@ -17,6 +17,7 @@
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton
 * py3status (AUR: py3status & py3status-modules)
+* WeatherDesk (github: https://github.com/bharadwaj-raju/WeatherDesk)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
 
 # Installation of i3 + urxvt theme
@@ -37,6 +38,12 @@ ln -sf networkmanager-dmenu ~/.config/networkmanager-dmenu
 ```
 
 # Getting a timed wallpaper (I use my buck wallpapers, not included)
+I moved from using the below configuration (with Systemd) to WeatherDesk.
+
+More information: https://github.com/bharadwaj-raju/WeatherDesk
+
+**!Below configuration is only present for backport reasons!**
+
 Adjust your username in systemd/changewallpaper.service (now set to jeffrey)
 
 copy the two files in the systemd directory to /usr/lib/systemd/system and enable them

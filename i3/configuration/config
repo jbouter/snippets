@@ -79,7 +79,7 @@ bindsym $mod+Return exec urxvtc
 bindsym $mod+Shift+q kill
 
 # start rofi(a program launcher)
-bindsym $mod+d exec rofi -show run -fg "#2c2c2c" -bg "#eeeeee" -hlfg "#eeeeee" -hlbg "#17838e" -opacity 90 -font "Fira Mono 12" -width 40 -lines 5
+bindsym $mod+d exec rofi -show run -fg "#afdab6" -bg "#eeeeee" -hlfg "#eeeeee" -hlbg "#17838e" -opacity 90 -font "Fira Mono 12" -width 40 -lines 5
 
 # Start dmenu-nmcli (Network Manager in dmenu/rofi)
 bindsym $mod+n exec nmcli_dmenu
@@ -249,15 +249,15 @@ bar {
         font pango: Fira Sans, FontAwesome Regular 12
         colors {
           # Whole color settings
-          background #eeeeee
-          statusline #2c2c2c
-          separator  #2c2c2c
+          background #404040
+          statusline #afdab6
+          separator  #5aa34f
 
           # Type             border  background font
-          focused_workspace  #2c2c2c #17838e #eeeeee
-          active_workspace   #2c2c2c #568a34 #eeeeee
-          inactive_workspace #2c2c2c #eeeeee #2c2c2c
-          urgent_workspace   #2c2c2c #c3282d #eeeeee
+          focused_workspace  #5aa34f #404040 #5aa34f
+          active_workspace   #afdab6 #568a34 #404040
+          inactive_workspace #afdab6 #404040 #afdab6
+          urgent_workspace   #afdab6 #dae145 #404040
         }
         status_command py3status -c ~/.config/i3/i3status.conf
         position top

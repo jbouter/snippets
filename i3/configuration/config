@@ -65,9 +65,6 @@ exec --no-startup-id /usr/bin/gnome-settings-daemon
 # Owncloud client
 exec --no-startup-id owncloud
 
-# Set wallpaper
-exec --no-startup-id ~/.config/i3/setwallpaper.sh
-
 #
 # Set Keybindings
 # 

@@ -10,6 +10,15 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #404040, #afdab6, #afdab6
+rofi.color-normal: #404040, #afdab6, #585858, #252525, #5aa34f
+rofi.color-active: #404040, #45a0e1, #585858, #252525, #45a0e1
+rofi.color-urgent: #404040, #dae145, #585858, #252525, #dae145
+
 !-------------------------------------------------------------------------------
 ! URxvt settings
 ! More info @ 

@@ -79,7 +79,7 @@ bindsym $mod+Return exec urxvtc
 bindsym $mod+Shift+q kill
 
 # start rofi(a program launcher)
-bindsym $mod+d exec rofi -show run -fg "#afdab6" -bg "#eeeeee" -hlfg "#eeeeee" -hlbg "#17838e" -opacity 90 -font "Fira Mono 12" -width 40 -lines 5
+bindsym $mod+d exec rofi -show run -font "Fira Mono 12" -opacity 90 -width 40 -lines 5
 
 # Start dmenu-nmcli (Network Manager in dmenu/rofi)
 bindsym $mod+n exec nmcli_dmenu
@@ -93,7 +93,7 @@ exec --no-startup-id xautolock -time 10 -locker '~/.config/i3/i3lock.sh'
 bindsym $mod+b exec firefox
 
 # Bind PrintScrn button to scrot
-bindsym Print exec scrot '%Y-%m-%d-%T-scrot.png' -e 'mv $f ~/documents/pictures/'
+bindsym Print exec teiler
 
 
 # Set up the default workspace layout

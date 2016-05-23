@@ -16,4 +16,4 @@ fi
 
 
 
-DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/time_based/$WALL.png
+DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/green_owl.png

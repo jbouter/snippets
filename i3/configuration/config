@@ -44,8 +44,8 @@ exec --no-startup-id urxvtd -q -f -o
 # YeaLink Monitor
 exec --no-startup-id python2 ~/documents/scripts/yealink-monitor.py
 
-# Wallpaper Daemon
-exec --no-startup-id python3 ~/documents/git/github/WeatherDesk/WeatherDesk.py -t 4 -d ~/documents/owncloud/photos/wallpaper/weatherdesk/ -c Groningen
+# Set wallpaper
+exec --no-startup-id sh ~/.config/i3/setwallpaper.sh
 
 # RedShift: ease the eyes
 exec --no-startup-id redshift -l 53.2:6.5 -t 6500:4200

@@ -27,8 +27,8 @@ rofi.color-urgent: #404040, #dae145, #585858, #252525, #dae145
 
 URxvt.depth:                32
 URxvt.geometry:             90x30
-! URxvt.transparent:          true
-! URxvt.shading:              10
+URxvt.transparent:          true
+URxvt.shading:              10
 URxvt.fading:               0
 ! URxvt.urgentOnBell:         false
 ! URxvt.visualBell:           true

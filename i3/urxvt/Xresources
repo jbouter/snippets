@@ -14,10 +14,10 @@ Xft.lcdfilter: lcddefault
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #404040, #afdab6, #afdab6
-rofi.color-normal: #404040, #afdab6, #585858, #252525, #5aa34f
-rofi.color-active: #404040, #45a0e1, #585858, #252525, #45a0e1
-rofi.color-urgent: #404040, #dae145, #585858, #252525, #dae145
+rofi.color-window: #393b3d, #8aa97d, #8aa97d
+rofi.color-normal: #393b3d, #eeeeed, #585858, #252525, #92c881
+rofi.color-active: #393b3d, #3392ba, #585858, #252525, #3392ba
+rofi.color-urgent: #393b3d, #c25165, #585858, #252525, #c25165
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -46,8 +46,8 @@ URxvt.keysym.Control-Right:    \033[1;5C
 ! Fonts
 URxvt.allow_bold:           false
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Fira Mono:pixelsize=16
-URxvt*boldFont: xft:Fira Mono:pixelsize=16
+URxvt*font: xft:Fira Mono:size=13
+URxvt*boldFont: xft:Fira Mono:size=13
 
 ! Fix font space
 URxvt*letterSpace: -1
@@ -74,7 +74,7 @@ URxvt.pointerBlank:         true
 ! More info @ https://github.com/mbadolato/iTerm2-Color-Schemes
 !-------------------------------------------------------------------------------
 
-#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/WarmNeon.xrdb"
+#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Chalk.xrdb"
 Rxvt*color0:       Ansi_0_Color
 Rxvt*color1:       Ansi_1_Color
 Rxvt*color2:       Ansi_2_Color

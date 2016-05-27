@@ -46,8 +46,8 @@ URxvt.keysym.Control-Right:    \033[1;5C
 ! Fonts
 URxvt.allow_bold:           false
 /* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Fira Mono:size=13
-URxvt*boldFont: xft:Fira Mono:size=13
+URxvt*font: xft:Hack:size=13
+URxvt*boldFont: xft:Hack:size=13
 
 ! Fix font space
 URxvt*letterSpace: -1

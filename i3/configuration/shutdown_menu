@@ -31,7 +31,7 @@
 
 # Options not related to colors
 ROFI_TEXT="PowerMenu:"
-ROFI_OPTIONS="-width -13 -hide-scrollbar -bw 2"
+ROFI_OPTIONS="-width -15 -hide-scrollbar -bw 2"
 
 # Zenity options
 ZENITY_TITLE="Menu"
@@ -106,11 +106,11 @@ typeset -A menu
 
 # Menu with keys/commands
 menu=(
-  [1. Shutdown]="systemctl poweroff"
-  [2. Reboot]="systemctl reboot"
-  [3. Hibernate]="systemctl hibernate"
-  [4. Suspend]="systemctl suspend"
-  [5. Logout]="i3-msg exit"
+  [1.  Shutdown]="systemctl poweroff"
+  [2.  Reboot]="systemctl reboot"
+  [3.  Hibernate]="systemctl hibernate"
+  [4.  Suspend]="systemctl suspend"
+  [5.  Logout]="i3-msg exit"
 )
 menu_nrows=${#menu[@]}
 

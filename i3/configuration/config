@@ -78,6 +78,9 @@ bindsym $mod+Return exec urxvtc
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# Shutdown menu
+bindsym $mod+Shift+s exec ~/.config/i3/shutdown_menu 
+
 # start rofi(a program launcher)
 bindsym $mod+d exec rofi -show run -font "Fira Mono 12" -opacity 90 -width 40 -lines 5
 

@@ -90,7 +90,7 @@ bindsym $mod+n exec nmcli_dmenu
 # Bind mod+ctrl+l to lockscreen
 bindsym $mod+Ctrl+l exec sh ~/.config/i3/i3lock.sh
 # Start a timer to automatically lock
-exec --no-startup-id xautolock -time 10 -locker '~/.config/i3/i3lock.sh'
+exec --no-startup-id xautolock -time 60 -locker '~/.config/i3/i3lock.sh'
 
 # Bind mod+b to browser
 bindsym $mod+b exec firefox

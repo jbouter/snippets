@@ -16,7 +16,7 @@
 * compton
 * Teiler (AUR: teiler-git)
 * py3status (AUR: py3status & py3status-modules)
-* i3lock-fancy (AUR: i3lock-fancy)
+* i3lock-fancy (AUR: i3lock-fancy-git)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
 
 # Installation of i3 + urxvt theme

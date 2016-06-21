@@ -14,10 +14,10 @@ Xft.lcdfilter: lcddefault
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #393b3d, #8aa97d, #8aa97d
-rofi.color-normal: #393b3d, #eeeeed, #585858, #252525, #92c881
-rofi.color-active: #393b3d, #3392ba, #585858, #252525, #3392ba
-rofi.color-urgent: #393b3d, #c25165, #585858, #252525, #c25165
+rofi.color-window: #363442, #dedede, #dedede
+rofi.color-normal: #363442, #eeeeed, #44434a, #dedede, #363442
+rofi.color-active: #363442, #3392ba, #44434a, #252525, #3392ba
+rofi.color-urgent: #363442, #c25165, #44434a, #252525, #c25165
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -74,7 +74,7 @@ URxvt.pointerBlank:         true
 ! More info @ https://github.com/mbadolato/iTerm2-Color-Schemes
 !-------------------------------------------------------------------------------
 
-#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Chalk.xrdb"
+#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Brogrammer.xrdb"
 Rxvt*color0:       Ansi_0_Color
 Rxvt*color1:       Ansi_1_Color
 Rxvt*color2:       Ansi_2_Color

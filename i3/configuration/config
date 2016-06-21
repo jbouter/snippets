@@ -252,15 +252,16 @@ bar {
         font pango: Fira Sans, FontAwesome Regular 12
         colors {
           # Whole color settings
-          background #393b3d
-          statusline #f0f0ef
-          separator  #f0f0ef
+          background #363442
+          statusline #DEDEDE
+          separator  #999999
 
           # Type             border  background font
-          focused_workspace  #8aa97d #393b3d #8aa97d
-          active_workspace   #f0f0ef #568a34 #393b3d
-          inactive_workspace #f0f0ef #393b3d #f0f0ef
-          urgent_workspace   #f0f0ef #c25165 #393b3d
+          focused_workspace  #DEDEDE #DEDEDE #363442
+          active_workspace   #DEDEDE #363442 #DEDEDE
+          inactive_workspace #363442 #363442 #DEDEDE
+          urgent_workspace   #DEDEDE #C25165 #363442
+          binding_mode       #DEDEDE #363442 #DEDEDE
         }
         status_command py3status -c ~/.config/i3/i3status.conf
         position top

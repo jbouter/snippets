@@ -12,12 +12,11 @@
 * rxvt-unicode (terminal emulator, basic config is in urxvt directory)
 * iTerm2-colors (git cloned via https://github.com/mbadolato/iTerm2-Color-Schemes)
 * Fira fonts (otf-fira-mono and otf-fira-sans)
-* Hack fonts (ttf-hack or ttf-hack-ibx)
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton
 * Teiler (AUR: teiler-git)
 * py3status (AUR: py3status & py3status-modules)
-* WeatherDesk (github: https://github.com/bharadwaj-raju/WeatherDesk)
+* i3lock-fancy (AUR: i3lock-fancy)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
 
 # Installation of i3 + urxvt theme

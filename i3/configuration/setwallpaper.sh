@@ -16,7 +16,8 @@ fi
 
 
 # Set the wallpaper
-DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/deer.jpg
+#DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/deer.jpg
+DISPLAY=$SETDISPLAY wallpaper-reddit
 
 # Set screen blanking to 1hr
 DISPLAY=$SETDISPLAY xset s 3600 3600 &

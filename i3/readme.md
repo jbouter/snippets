@@ -14,6 +14,7 @@
 * Fira fonts (otf-fira-mono and otf-fira-sans)
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton
+* wallpaper-reddit (AUR: wallpaper-reddit-git)
 * Teiler (AUR: teiler-git)
 * py3status (AUR: py3status & py3status-modules)
 * i3lock-fancy (AUR: i3lock-fancy-git)

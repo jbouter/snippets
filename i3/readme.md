@@ -16,7 +16,7 @@
 * compton
 * wallpaper-reddit (AUR: wallpaper-reddit-git)
 * Teiler (AUR: teiler-git)
-* py3status (AUR: py3status & py3status-modules)
+* i3blocks (with gaps) (AUR: i3blocks-gaps-git)
 * i3lock-fancy (AUR: i3lock-fancy-git)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
 

@@ -247,21 +247,28 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+#
+# Set the transparent colour
+set $transparent #00000000
+set $regular #DEDEDE
+set $urgent #C25165
+set $active #00bcd4
 bar {
 
         font pango: Fira Sans, FontAwesome Regular 12
+        i3bar_command i3bar -t
         colors {
           # Whole color settings
-          background #363442
-          statusline #DEDEDE
-          separator  #999999
+          background $transparent
+          statusline $regular
+          separator  $regular
 
           # Type             border  background font
-          focused_workspace  #DEDEDE #DEDEDE #363442
-          active_workspace   #DEDEDE #363442 #DEDEDE
-          inactive_workspace #363442 #363442 #DEDEDE
-          urgent_workspace   #DEDEDE #C25165 #363442
-          binding_mode       #DEDEDE #363442 #DEDEDE
+          focused_workspace  $transparent $transparent $active
+          active_workspace   $transparent $transparent $active
+          inactive_workspace $transparent $transparent $regular
+          urgent_workspace   $transparent $transparent $urgent
+          binding_mode       $transparent $transparent $regular
         }
         status_command SCRIPT_DIR=/usr/libexec/i3blocks i3blocks -c ~/.config/i3/i3blocks.conf
         position top

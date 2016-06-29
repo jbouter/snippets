@@ -16,7 +16,8 @@ fi
 
 
 # Set the wallpaper
-DISPLAY=$SETDISPLAY wallpaper-reddit --random --force
+#DISPLAY=$SETDISPLAY wallpaper-reddit --random --force
+DISPLAY=$SETDISPLAY feh --bg-fill ~/documents/owncloud/wallpapers/arc_wheel.png
 
 # Set screen blanking to 1hr
 DISPLAY=$SETDISPLAY xset s 3600 3600 &

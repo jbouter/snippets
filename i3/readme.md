@@ -14,7 +14,6 @@
 * Fira fonts (otf-fira-mono and otf-fira-sans)
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton
-* wallpaper-reddit (AUR: wallpaper-reddit-git)
 * Teiler (AUR: teiler-git)
 * i3blocks (with gaps) (AUR: i3blocks-gaps-git)
 * i3lock-fancy (AUR: i3lock-fancy-git)

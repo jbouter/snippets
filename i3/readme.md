@@ -17,6 +17,7 @@
 * i3blocks (with gaps) (AUR: i3blocks-gaps-git)
 * i3lock-fancy (AUR: i3lock-fancy-git)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
+* i3block modules (included in this repo)
 
 # Installation of i3 + urxvt theme
 There are three basic directories. My installation is as follows
@@ -34,6 +35,9 @@ ln -sf configuration ~/.config/i3
 ln -sf urxvt/Xresources ~/.Xresources
 ln -sf networkmanager-dmenu ~/.config/networkmanager-dmenu
 ```
+
+# i3blocks modules
+Copy the files in i3blocks-modules to /usr/libexec/i3blocks/
 
 # Getting a timed wallpaper (I use my buck wallpapers, not included)
 I moved from using the below configuration (with Systemd) to WeatherDesk.

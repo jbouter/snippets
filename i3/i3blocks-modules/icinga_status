@@ -1,0 +1,15 @@
+#!/usr/bin/env python
+import requests
+import json
+
+r = requests.get('http://nms.warpnet.nl/cgi-bin/icinga/tac.cgi?jsonoutput', auth=('username', 'password'))
+if r:
+ data = r.json()
+ if data['tac']['tac_overview']['services_critical_active_unacknowledged'] > 0:
+  print("Critical")
+  print("Critical")
+ elif data['tac']['tac_overview']['services_warning_active_unacknowledged'] > 0:
+  print("Warning")
+  print("Warning")
+ else:
+  print("Okay")

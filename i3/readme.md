@@ -18,6 +18,8 @@
 * i3lock-fancy (AUR: i3lock-fancy-git)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
 * i3block modules (included in this repo)
+* papirus icon theme (AUR: papirus-icon-theme-gtk-git)
+* papirus wallpapers (AUR: papirus-wallpapers-git)
 
 # Installation of i3 + urxvt theme
 There are three basic directories. My installation is as follows

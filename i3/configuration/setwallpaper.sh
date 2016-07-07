@@ -17,7 +17,7 @@ fi
 
 # Set the wallpaper
 #DISPLAY=$SETDISPLAY wallpaper-reddit --random --force
-DISPLAY=$SETDISPLAY feh --bg-fill "/usr/share/wallpapers/Papirus Dark/contents/images/2400x1350.png"
+DISPLAY=$SETDISPLAY feh --bg-fill "/home/jeffrey/documents/owncloud/wallpapers/elemental_stripes.jpg"
 
 # Set screen blanking to 1hr
 DISPLAY=$SETDISPLAY xset s 3600 3600 &

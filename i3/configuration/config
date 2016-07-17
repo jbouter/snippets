@@ -273,5 +273,6 @@ bar {
         workspace_buttons yes
         tray_output LVDS-1
         tray_output DVI-D-0
+        tray_output DVI-I-1
         tray_output VGA-1
 }

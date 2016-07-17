@@ -102,8 +102,6 @@ bindsym Print exec teiler
 # Set up the default workspace layout
 # 3 terminals on workspace 1
 exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
-exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
-exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
 # Evolution in workspace 4
 exec --no-startup-id i3-msg 'workspace $4; exec evolution'
 # Single terminal in workspace 5

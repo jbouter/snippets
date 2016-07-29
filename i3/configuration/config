@@ -106,6 +106,8 @@ exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
 exec --no-startup-id i3-msg 'workspace $4; exec evolution'
 # Single terminal in workspace 5
 exec --no-startup-id i3-msg 'workspace $5; exec urxvtc'
+# Atom in workspace 6
+exec --no-startup-id i3-msg 'workspace $6; exec atom'
 # Thunar in workspace 10
 exec --no-startup-id i3-msg 'workspace $10; exec thunar'
 
@@ -180,7 +182,7 @@ set $2   2: 
 set $3   3: 
 set $4   4: 
 set $5   5: 
-set $6   6: 
+set $6   6: 
 set $7   7: 
 set $8   8: 
 set $9   9: 

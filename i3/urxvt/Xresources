@@ -69,54 +69,35 @@ URxvt.cursorUnderline:      false
 ! Pointer
 URxvt.pointerBlank:         true
 
-!-------------------------------------------------------------------------------
-! URxvt Colour Scheme
-! More info @ https://github.com/mbadolato/iTerm2-Color-Schemes
-!-------------------------------------------------------------------------------
-
-#include "/home/jeffrey/documents/git/github/iTerm2-Color-Schemes/xrdb/Brogrammer.xrdb"
-Rxvt*color0:       Ansi_0_Color
-Rxvt*color1:       Ansi_1_Color
-Rxvt*color2:       Ansi_2_Color
-Rxvt*color3:       Ansi_3_Color
-Rxvt*color4:       Ansi_4_Color
-Rxvt*color5:       Ansi_5_Color
-Rxvt*color6:       Ansi_6_Color
-Rxvt*color7:       Ansi_7_Color
-Rxvt*color8:       Ansi_8_Color
-Rxvt*color9:       Ansi_9_Color
-Rxvt*color10:      Ansi_10_Color
-Rxvt*color11:      Ansi_11_Color
-Rxvt*color12:      Ansi_12_Color
-Rxvt*color13:      Ansi_13_Color
-Rxvt*color14:      Ansi_14_Color
-Rxvt*color15:      Ansi_15_Color
-Rxvt*colorBD:      Bold_Color
-Rxvt*colorIT:      Italic_Color
-Rxvt*colorUL:      Underline_Color
-Rxvt*foreground:   Foreground_Color
-Rxvt*background:   Background_Color
-Rxvt*cursorColor:  Cursor_Color
-
-XTerm*color0:      Ansi_0_Color
-XTerm*color1:      Ansi_1_Color
-XTerm*color2:      Ansi_2_Color
-XTerm*color3:      Ansi_3_Color
-XTerm*color4:      Ansi_4_Color
-XTerm*color5:      Ansi_5_Color
-XTerm*color6:      Ansi_6_Color
-XTerm*color7:      Ansi_7_Color
-XTerm*color8:      Ansi_8_Color
-XTerm*color9:      Ansi_9_Color
-XTerm*color10:     Ansi_10_Color
-XTerm*color11:     Ansi_11_Color
-XTerm*color12:     Ansi_12_Color
-XTerm*color13:     Ansi_13_Color
-XTerm*color14:     Ansi_14_Color
-XTerm*color15:     Ansi_15_Color
-XTerm*colorBD:     Bold_Color
-XTerm*colorIT:     Italic_Color
-XTerm*colorUL:     Underline_Color
-XTerm*foreground:  Foreground_Color
-XTerm*background:  Background_Color
-XTerm*cursorColor: Cursor_Color
+! Tango color palette
+URxvt*background:         #2e3436
+URxvt*foreground:         #eeeeec
+URxvt*cursorColor:        #8ae234
+! foreground color for underline
+URxvt*colorUL:            #8ae234
+! line color for underline
+URxvt*underlineColor:     #92659a
+! black dark/light
+URxvt*color0:             #2e3436
+URxvt*color8:             #6e706b
+! red dark/light
+URxvt*color1:             #cc0000
+URxvt*color9:             #ef2929
+! green dark/light
+URxvt*color2:             #4e9a06
+URxvt*color10:            #8ae234
+! yellow dark/light
+URxvt*color3:             #edd400
+URxvt*color11:            #fce94f
+! blue dark/light
+URxvt*color4:             #3465a4
+URxvt*color12:            #729fcf
+! magenta dark/light
+URxvt*color5:             #92659a
+URxvt*color13:            #c19fbe
+! cyan dark/light
+URxvt*color6:             #07c7ca
+URxvt*color14:            #63e9e9
+! white dark/light
+URxvt*color7:             #d3d7cf
+URxvt*color15:            #eeeeec

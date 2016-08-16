@@ -248,7 +248,7 @@ bindsym $mod+r mode "resize"
 #
 # Set the transparent colour
 set $transparent #00000000
-set $regular #DEDEDE
+set $regular #FDFDFD
 set $urgent #7b1fa2
 set $active #4A90D9
 bar {

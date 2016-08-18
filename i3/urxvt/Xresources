@@ -59,7 +59,7 @@ URxvt.scrollBar:            false
 ! Perl extensions
 URxvt.perl-ext-common:      default,matcher,selection-to-clipboard
 URxvt.matcher.button:       1
-URxvt.urlLauncher:          chromium
+URxvt.url-launcher:         chromium
 
 ! Cursor
 URxvt.cursorBlink:          true

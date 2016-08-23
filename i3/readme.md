@@ -11,6 +11,7 @@
 * rxvt-unicode (terminal emulator, basic config is in urxvt directory)
 * iTerm2-colors (git cloned via https://github.com/mbadolato/iTerm2-Color-Schemes)
 * Fira fonts (otf-fira-mono and otf-fira-sans)
+* Iosevka (ttf-iosevka-ibx)
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton
 * Teiler (AUR: teiler-git)

@@ -23,6 +23,7 @@ max_brightness=$(cat $handler"max_brightness")
 
 #
 # Below block works with Nvidia drivers
+# Add ' Option "RegistryDwords" "EnableBrightnessControl=1"' to /etc/X11/xorg.conf.d/20-nvidia.conf
 #
 
 # Add or substract $1

@@ -76,8 +76,8 @@ URxvt.iso14755:      false
 URxvt.iso14755_52:    false
 
 ! Tango colour theme for rxvt-unicode
-URxvt.background: #FFFFFF
-URxvt.foreground: #000000
+URxvt.background: #293133
+URxvt.foreground: #d6cecc
 
 ! Black
 URxvt.color0: #2E3436

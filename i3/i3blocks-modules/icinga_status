@@ -2,7 +2,7 @@
 import requests
 import json
 
-r = requests.get('http://nms.warpnet.nl/cgi-bin/icinga/tac.cgi?jsonoutput', auth=('username', 'password'))
+r = requests.get('http://nms.warpnet.nl/cgi-bin/icinga/tac.cgi?jsonoutput', timeout=1, auth=('username', 'password'))
 if r:
  data = r.json()
  if data['tac']['tac_overview']['services_critical_active_unacknowledged'] > 0:

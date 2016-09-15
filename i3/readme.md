@@ -9,7 +9,7 @@
 * redshift (to ease your eyes after it gets dark)
 * rxvt-unicode (terminal emulator, basic config is in urxvt directory)
 * Fira fonts (otf-fira-mono and otf-fira-sans)
-* Iosevka (ttf-iosevka-ibx)
+* Iosevka (AUR: ttf-iosevka, ttf-iosevka-slab, ttf-iosevka-term, ttf-iosevka-term-slab)
 * Ubuntu Fonts (ttf-ubuntu-font-family-ib)
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton

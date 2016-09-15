@@ -65,6 +65,9 @@ exec --no-startup-id /usr/bin/gnome-settings-daemon
 # Owncloud client
 exec --no-startup-id owncloud
 
+# NetworkManager Applet (because nmcli_dmenu seems broken a lot)
+exec --no-startup-id nm-applet
+
 #
 # Set Keybindings
 # 
@@ -83,9 +86,6 @@ bindsym $mod+Shift+s exec ~/.config/i3/shutdown_menu
 
 # start rofi(a program launcher)
 bindsym $mod+d exec rofi -show run -font "Iosevka Regular 12" -opacity 90 -width 40 -lines 5
-
-# Start dmenu-nmcli (Network Manager in dmenu/rofi)
-bindsym $mod+n exec sudo wpa_gui
 
 # Bind mod+ctrl+l to lockscreen
 bindsym $mod+Ctrl+l exec sh ~/.config/i3/i3lock.sh

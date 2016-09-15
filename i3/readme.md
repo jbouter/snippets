@@ -1,17 +1,16 @@
 # Required software
 * owncloud (daemon gets started in i3/config)
 * rofi (or dmenu, but then you need to change the config around)
-* networkmanager-dmenu-git (AUR) (github: https://github.com/firecat53/nmcli-dmenu)
-* firefox (used as mod+b browser launcher)
+* chromium (used as mod+b browser launcher)
 * feh (for setting wallpaper)
 * scrot (for screenshotting)
 * xautolock (for automatic screenlocking)
 * alsa-utils (for volume control)
 * redshift (to ease your eyes after it gets dark)
 * rxvt-unicode (terminal emulator, basic config is in urxvt directory)
-* iTerm2-colors (git cloned via https://github.com/mbadolato/iTerm2-Color-Schemes)
 * Fira fonts (otf-fira-mono and otf-fira-sans)
 * Iosevka (ttf-iosevka-ibx)
+* Ubuntu Fonts (ttf-ubuntu-font-family-ib)
 * Font Awesome (used for icons in bar, AUR: ttf-font-awesome)
 * compton
 * Teiler (AUR: teiler-git)
@@ -19,8 +18,6 @@
 * i3lock-fancy (AUR: i3lock-fancy-git)
 * YeaLink Monitor (github: https://github.com/fdev/snippets/blob/master/yealink-monitor.py)
 * i3block modules (included in this repo)
-* papirus icon theme (AUR: papirus-icon-theme-gtk-git)
-* papirus wallpapers (AUR: papirus-wallpapers-git)
 
 # Installation of i3 + urxvt theme
 There are three basic directories. My installation is as follows

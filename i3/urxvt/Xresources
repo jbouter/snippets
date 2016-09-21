@@ -14,10 +14,10 @@ Xft.lcdfilter: lcddefault
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #363442, #dedede, #dedede
-rofi.color-normal: #363442, #eeeeed, #44434a, #dedede, #363442
-rofi.color-active: #363442, #3392ba, #44434a, #252525, #3392ba
-rofi.color-urgent: #363442, #c25165, #44434a, #252525, #c25165
+rofi.color-window: #293133, #dedede, #dedede
+rofi.color-normal: #293133, #eeeeed, #44434a, #dedede, #363442
+rofi.color-active: #293133, #3392ba, #44434a, #252525, #3392ba
+rofi.color-urgent: #293133, #c25165, #44434a, #252525, #c25165
 
 !-------------------------------------------------------------------------------
 ! URxvt settings

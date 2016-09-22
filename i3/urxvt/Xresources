@@ -36,6 +36,8 @@ URxvt.loginShell:           true
 URxvt.saveLines:            4096
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
+URxvt.externalBorder:       1
+URxvt.borderColor:          #888888
 
 ! Arrow movements
 URxvt.keysym.Control-Up:   \033[1;5A

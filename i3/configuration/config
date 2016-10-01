@@ -48,7 +48,7 @@ exec --no-startup-id python2 ~/documents/scripts/yealink-monitor.py
 exec --no-startup-id sh ~/.config/i3/setwallpaper.sh
 
 # RedShift: ease the eyes
-exec --no-startup-id redshift -l 53.2:6.5 -t 6500:4200
+exec --no-startup-id redshift -c ~/.config/i3/redshift.conf
 
 # Start Compton: Compositing manager - daemonise and use shadows
 exec --no-startup-id compton -CG &

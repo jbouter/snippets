@@ -1,7 +1,7 @@
 # Required software
-* owncloud (daemon gets started in i3/config)
+* nextcloud (daemon gets started in i3/config)
 * rofi (or dmenu, but then you need to change the config around)
-* chromium (used as mod+b browser launcher)
+* firefox (used as mod+b browser launcher)
 * feh (for setting wallpaper)
 * scrot (for screenshotting)
 * xautolock (for automatic screenlocking)

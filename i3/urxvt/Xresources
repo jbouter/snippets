@@ -29,29 +29,29 @@ URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          true
 URxvt.shading:              10
-URxvt.fading:               0
 ! URxvt.urgentOnBell:         false
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
 URxvt.saveLines:            4096
-URxvt.internalBorder:       0
+URxvt.internalBorder:       2
 URxvt.lineSpace:            0
+URxvt.borderWidth:          1
 URxvt.externalBorder:       1
-URxvt.borderColor:          #888888
+URxvt.borderColor:          #FFA500
+URxvt.fading:               50
+URxvt.fadeColor:            #888888
 
 ! Arrow movements
-URxvt.keysym.Control-Up:   \033[1;5A
+URxvt.keysym.Control-Up:      \033[1;5A
 URxvt.keysym.Control-Down:    \033[1;5B
 URxvt.keysym.Control-Left:    \033[1;5D
-URxvt.keysym.Control-Right:    \033[1;5C
+URxvt.keysym.Control-Right:   \033[1;5C
 
 ! Fonts
 URxvt.allow_bold:           true
-/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font:      xft:iosevka term slab:pixelsize=18
-URxvt*boldFont:  xft:iosevka term slab:pixelsize=18
-! URxvt*font:      xft:Ubuntu Mono:size=13:antialias=true:hinting=true
-! URxvt*boldFont:  xft:Ubuntu Mono:size=13:antialias=true:hinting=true
+URxvt.font:                 xft:iosevka term slab:pixelsize=18
+URxvt.italicFont:           xft:iosevka term slab italic:pixelsize=18 
+URxvt.boldFont:             xft:iosevka term slab medium:pixelsize=18
 
 ! Fix font space
 URxvt*letterSpace: -1
@@ -67,8 +67,8 @@ URxvt.url-launcher:         chromium
 
 ! Cursor
 URxvt.cursorBlink:          true
-URxvt.cursorColor:          #657b83
-URxvt.cursorUnderline:      false
+URxvt.cursorColor:          #FFA500
+URxvt.cursorUnderline:      true
 
 ! Pointer
 URxvt.pointerBlank:         true

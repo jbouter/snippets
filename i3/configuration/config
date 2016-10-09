@@ -250,7 +250,7 @@ bindsym $mod+r mode "resize"
 set $transparent #00000000
 set $regular #FDFDFD
 set $urgent #7b1fa2
-set $active #4A90D9
+set $active #FFA500
 bar {
 
         font pango: FontAwesome Regular, Iosevka Regular 16px

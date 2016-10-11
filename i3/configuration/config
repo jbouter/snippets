@@ -249,8 +249,8 @@ bindsym $mod+r mode "resize"
 # Set the transparent colour
 set $transparent #00000000
 set $regular #FDFDFD
-set $urgent #7b1fa2
-set $active #FFA500
+set $urgent #FFA500
+set $active #fac863
 bar {
 
         font pango: FontAwesome Regular, Iosevka Regular 16px

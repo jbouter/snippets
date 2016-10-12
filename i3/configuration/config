@@ -100,12 +100,14 @@ bindsym Print exec teiler
 
 
 # Set up the default workspace layout
-# 3 terminals on workspace 1
+# urxvt on workspace 1
 exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
-# Evolution in workspace 4
+# Thunderbird in workspace 4
 exec --no-startup-id i3-msg 'workspace $4; exec thunderbird'
-# Single terminal in workspace 5
+# urxvt on workspace 5
 exec --no-startup-id i3-msg 'workspace $5; exec urxvtc'
+# Start enpass in workspace 9
+exec --no-startup-id i3-msg 'workspace $9; exec enpass'
 # Thunar in workspace 10
 exec --no-startup-id i3-msg 'workspace $10; exec thunar'
 
@@ -183,7 +185,7 @@ set $5   5:
 set $6   6:
 set $7   7:
 set $8   8:
-set $9   9:
+set $9   9:
 set $10  10:
  
 # Switch to workspace
@@ -195,7 +197,7 @@ bindsym $mod+5 workspace $5
 bindsym $mod+6 workspace $6
 bindsym $mod+7 workspace $7
 bindsym $mod+8 workspace $8
-bindsym $mod+9 workspace $9 
+bindsym $mod+9 workspace $9
 bindsym $mod+0 workspace $10
 
 # Move focused container to workspace

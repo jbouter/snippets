@@ -56,9 +56,9 @@ URxvt.keysym.Control-Right:   \033[1;5C
 
 ! Fonts
 URxvt.allow_bold:           true
-URxvt.font:                 xft:iosevka term slab:pixelsize=18
-URxvt.italicFont:           xft:iosevka term slab italic:pixelsize=18 
-URxvt.boldFont:             xft:iosevka term slab medium:pixelsize=18
+URxvt.font:                 xft:ubuntu mono:pixelsize=18
+!URxvt.italicFont:           xft:ubuntu mono italic:pixelsize=20
+!URxvt.boldFont:             xft:ubuntu mono bold:pixelsize=20
 
 ! Fix font space
 URxvt*letterSpace: -1

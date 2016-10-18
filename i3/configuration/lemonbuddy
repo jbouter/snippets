@@ -35,7 +35,7 @@ font-2 = FontAwesome Regular:size=10;1
 
 modules-left = battery memory volume backlight
 modules-center = i3
-modules-right = wired wifi date
+modules-right = wiredlaptop wireddesktop wifi date
 
 tray-position = right
 
@@ -109,9 +109,18 @@ ramp-signal-4 = 
 ramp-signal-foreground = #666
 
 
-[module/wired]
+[module/wiredlaptop]
 type = internal/network
 interface = enp0s25
+interval = 3.0
+
+label-connected = %{T3}%local_ip%%{T-}
+label-disconnected = %{T3}Not connected%{T-}
+label-disconnected-foreground = #66
+
+[module/wireddesktop]
+type = internal/network
+interface = enp3s0
 interval = 3.0
 
 label-connected = %{T3}%local_ip%%{T-}
@@ -126,7 +135,6 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = #666
-
 
 [module/volume]
 type = internal/volume

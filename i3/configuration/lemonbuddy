@@ -33,11 +33,12 @@ font-0 = Iosevka Term Slab:size=10;1
 font-1 = FontAwesome Regular:size=10;1
 font-2 = FontAwesome Regular:size=10;1
 
-modules-left = battery memory volume backlight
+modules-left = battery cpu memory
 modules-center = i3
-modules-right = wiredlaptop wireddesktop wifi date
+modules-right = volume wifi date
 
 tray-position = right
+wm-restack = i3
 
 [module/i3]
 type = internal/i3
@@ -65,6 +66,28 @@ label-visible-padding = 2
 type = internal/date
 date = %Y-%m-%d %%{F#e60053}%H:%M%%{F#cc}
 interval = 5
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+
+format = <label> <bar-load>
+label = CPU
+
+bar-load-width = 20
+bar-load-foreground-0 = #55aa55
+bar-load-foreground-1 = #55aa55
+bar-load-foreground-2 = #F99157
+bar-load-foreground-3 = #ff5555
+bar-load-gradient = false
+bar-load-indicator = %{F#F99157}│%{F#cc}
+bar-load-indicator-font = 2
+bar-load-indicator-foreground = #ff
+bar-load-fill = ━
+bar-load-fill-font = 2
+bar-load-empty = ━
+bar-load-empty-font = 2
+bar-load-empty-foreground = #444444
 
 [module/memory]
 type = internal/memory
@@ -107,34 +130,6 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = #666
-
-
-[module/wiredlaptop]
-type = internal/network
-interface = enp0s25
-interval = 3.0
-
-label-connected = %{T3}%local_ip%%{T-}
-label-disconnected = %{T3}Not connected%{T-}
-label-disconnected-foreground = #66
-
-[module/wireddesktop]
-type = internal/network
-interface = enp3s0
-interval = 3.0
-
-label-connected = %{T3}%local_ip%%{T-}
-label-disconnected = %{T3}Not connected%{T-}
-label-disconnected-foreground = #66
-
-[module/backlight]
-type = internal/backlight
-card = intel_backlight
-format = <ramp> <label>
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = #666
 
 [module/volume]
 type = internal/volume

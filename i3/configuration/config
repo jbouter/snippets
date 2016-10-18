@@ -70,7 +70,7 @@ exec --no-startup-id nm-applet
 
 #
 # Set Keybindings
-# 
+#
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -82,7 +82,7 @@ bindsym $mod+Return exec urxvtc
 bindsym $mod+Shift+q kill
 
 # Shutdown menu
-bindsym $mod+Shift+s exec ~/.config/i3/shutdown_menu 
+bindsym $mod+Shift+s exec ~/.config/i3/shutdown_menu
 
 # start rofi(a program launcher)
 bindsym $mod+d exec rofi -show run -font "Iosevka Regular 12" -opacity 90 -width 40 -lines 5
@@ -93,23 +93,12 @@ bindsym $mod+Ctrl+l exec sh ~/.config/i3/i3lock.sh
 exec --no-startup-id xautolock -time 60 -locker '~/.config/i3/i3lock.sh'
 
 # Bind mod+b to browser
-bindsym $mod+b exec chromium 
+bindsym $mod+b exec chromium
 
 # Bind PrintScrn button to scrot
 bindsym Print exec teiler
 
 
-# Set up the default workspace layout
-# urxvt on workspace 1
-exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
-# Thunderbird in workspace 4
-exec --no-startup-id i3-msg 'workspace $4; exec thunderbird'
-# urxvt on workspace 5
-exec --no-startup-id i3-msg 'workspace $5; exec urxvtc'
-# Start enpass in workspace 9
-exec --no-startup-id i3-msg 'workspace $9; exec enpass'
-# Thunar in workspace 10
-exec --no-startup-id i3-msg 'workspace $10; exec thunar'
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ #increase sound volume
@@ -187,7 +176,27 @@ set $7   7:
 set $8   8:
 set $9   9:
 set $10  10:
- 
+
+# Set up the default workspace layout
+# urxvt on workspace 1
+exec --no-startup-id i3-msg 'workspace $1; exec urxvtc'
+# Thunderbird in workspace 4
+exec --no-startup-id i3-msg 'workspace $4; exec thunderbird'
+# urxvt on workspace 5
+exec --no-startup-id i3-msg 'workspace $5; exec urxvtc'
+# Start enpass in workspace 9
+exec --no-startup-id i3-msg 'workspace $9; exec enpass'
+# Thunar in workspace 10
+exec --no-startup-id i3-msg 'workspace $10; exec thunar'
+
+# Assign workspaces to applications
+assign [class="^Telegram$|^WhatsChrome$"] 3:
+assign [class="^Mozilla Thunderbird$"] 4:
+assign [class="^Atom$"] 6:
+assign [class="^Steam$"] 7:
+assign [class="^Enpass$"] 9:
+assign [class="^Thunar$"] 10:
+
 # Switch to workspace
 bindsym $mod+1 workspace $1
 bindsym $mod+2 workspace $2

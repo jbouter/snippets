@@ -30,12 +30,11 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = Iosevka Term Slab:size=10;1
-font-1 = FontAwesome Regular:size=10;1
-font-2 = FontAwesome Regular:size=10;1
+font-1 = FontAwesome:size=10;0
 
 modules-left = battery cpu memory
 modules-center = i3
-modules-right = volume wifi date
+modules-right = volume backlight date
 
 tray-position = right
 wm-restack = i3
@@ -45,19 +44,30 @@ type = internal/i3
 format = <label-state>
 index-sort = true
 
-label-focused = %index%
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
+label-focused = %index% %icon%
 label-focused-background = #ee333333
 label-focused-underline= #cc333333
 label-focused-padding = 2
 
-label-unfocused = %index%
+label-unfocused = %index% %icon%
 label-unfocused-padding = 2
 
-label-urgent = %index%!
+label-urgent = %index% %icon%
 label-urgent-background = #bd2c40
 label-urgent-padding = 2
 
-label-visible = %index%
+label-visible = %index% %icon%
 label-visible-foreground = #444
 label-visible-padding = 2
 
@@ -72,7 +82,7 @@ type = internal/cpu
 interval = 2
 
 format = <label> <bar-load>
-label = CPU
+label = 
 
 bar-load-width = 20
 bar-load-foreground-0 = #55aa55
@@ -94,7 +104,7 @@ type = internal/memory
 interval = 2
 
 format = <label> <bar-used>
-label = RAM
+label = 
 
 bar-used-width = 20
 bar-used-foreground-0 = #55aa55
@@ -111,48 +121,22 @@ bar-used-empty = ━
 bar-used-empty-font = 2
 bar-used-empty-foreground = #444444
 
-[module/wifi]
-type = internal/network
-interface = wlp3s0
-interval = 3.0
-;udspeed-minwidth = 3
-
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid% %{F#66}%local_ip%
-;label-connected = %{F#666}%{F#cc} %upspeed% %{F#666}%{F#cc} %downspeed%
-;label-connected = %{O-6 F#666}%{O2 F#cc}%downspeed%
-label-disconnected = %{F#666}%{F#cc} not connected
-label-disconnected-foreground = #66
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = #666
-
 [module/volume]
 type = internal/volume
-speaker-mixer = Speaker
-headphone-mixer = Headphone
-headphone-id = 9
 
-; format-volume = <ramp-volume> <label-volume>
-format-volume = <label-volume> <bar-volume>
+format-volume = <ramp-volume> <bar-volume>
 
-label-volume = VOL
 label-volume-foreground = ${BAR.foreground}
 
-label-muted = %{F#66} sound muted
+label-muted = %{F#66} sound muted
 
-;ramp-volume-0 = 
-;ramp-volume-1 = 
-;ramp-volume-2 = 
-;ramp-volume-3 = 
-;ramp-volume-foreground = #666
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-volume-3 = 
 
-;ramp-headphones-0 = 
-;ramp-headphones-1 = 
+ramp-headphones-0 = 
+ramp-headphones-1 = 
 
 bar-volume-width = 20
 bar-volume-foreground-0 = #55aa55
@@ -172,29 +156,69 @@ bar-volume-empty = ━
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = #444444
 
+[module/backlight]
+type = internal/backlight
+format = <label> <bar>
+label = 
 
-#[module/battery]
-#type = internal/battery
-#full-at = 98
-#
-#format-charging = <animation-charging> <label-charging>
-#format-discharging = <ramp-capacity> <label-discharging>
-#format-full = %{F#666}%{F#cc}  <label-full>
-#
-#ramp-capacity-0 = 
-#ramp-capacity-1 = 
-#ramp-capacity-2 = 
-#ramp-capacity-foreground = #666
-#
-#animation-charging-0 = 
-#animation-charging-1 = 
-#animation-charging-2 = 
-#animation-charging-foreground = #666
-#animation-charging-framerate = 750
+bar-width = 10
+bar-foreground-0 = #55aa55
+bar-foreground-1 = #55aa55
+bar-foreground-2 = #55aa55
+bar-foreground-3 = #55aa55
+bar-foreground-4 = #55aa55
+bar-foreground-5 = #f5a70a
+bar-foreground-6 = #ff5555
+bar-gradient = false
+bar-indicator = │
+bar-indicator-font = 2
+bar-indicator-foreground = #ff
+bar-fill = ━
+bar-fill-font = 2
+bar-empty = ━
+bar-empty-font = 2
+bar-empty-foreground = #444444
+
+; Use the following command to list available cards:
+; $ ls -1 /sys/class/backlight/
+card = acpi_video0
 
 [module/battery]
-type = custom/script
-exec = /usr/libexec/i3blocks/battery
-format = %{T3} BAT  <output> %{T-}
+type = internal/battery
+full-at = 98
+label = BAT
+
+battery = BAT0
+adapter = AC
+
+format-charging = <ramp-capacity> <label-charging> <bar-capacity>
+format-discharging = <ramp-capacity> <label-discharging> <bar-capacity>
+
+label-charging = +
+label-discharging = -
+
+bar-capacity-width = 20
+bar-capacity-foreground-0 = #55aa55
+bar-capacity-foreground-1 = #55aa55
+bar-capacity-foreground-2 = #55aa55
+bar-capacity-foreground-3 = #55aa55
+bar-capacity-foreground-4 = #55aa55
+bar-capacity-foreground-5 = #f5a70a
+bar-capacity-foreground-6 = #ff5555
+bar-capacity-gradient = false
+bar-capacity-indicator = │
+bar-capacity-indicator-font = 2
+bar-capacity-indicator-foreground = #ff
+bar-capacity-fill = ━
+bar-capacity-fill-font = 2
+bar-capacity-empty = ━
+bar-capacity-empty-font = 2
+bar-capacity-empty-foreground = #444444
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
 ; vim:ft=dosini

@@ -38,6 +38,9 @@ gaps outer 5 # pxls between edge of screen
 # Start custom daemons
 #
 
+# Lemonbuddy bar
+exec_always --no-startup-id ~/.config/i3/launch_lemonbuddy.sh
+
 # urxvt daemon
 exec --no-startup-id urxvtd -q -f -o
 
@@ -166,16 +169,16 @@ bindsym $mod+a focus parent
 
 
 # Initialise workspace
-set $1   1:
-set $2   2:
-set $3   3:
-set $4   4:
-set $5   5:
-set $6   6:
-set $7   7:
-set $8   8:
-set $9   9:
-set $10  10:
+set $1   1
+set $2   2
+set $3   3
+set $4   4
+set $5   5
+set $6   6
+set $7   7
+set $8   8
+set $9   9
+set $10  10
 
 # Set up the default workspace layout
 # urxvt on workspace 1
@@ -190,12 +193,12 @@ exec --no-startup-id i3-msg 'workspace $9; exec enpass'
 exec --no-startup-id i3-msg 'workspace $10; exec thunar'
 
 # Assign workspaces to applications
-assign [class="^Telegram$|^WhatsChrome$"] 3:
-assign [class="^Mozilla Thunderbird$"] 4:
-assign [class="^Atom$"] 6:
-assign [class="^Steam$"] 7:
-assign [class="^Enpass$"] 9:
-assign [class="^Thunar$"] 10:
+assign [class="^Telegram$|^WhatsChrome$"] 3
+assign [class="^Mozilla Thunderbird$"] 4
+assign [class="^Atom$"] 6
+assign [class="^Steam$"] 7
+assign [class="^Enpass$"] 9
+assign [class="^Thunar$"] 10
 
 # Switch to workspace
 bindsym $mod+1 workspace $1
@@ -262,30 +265,28 @@ set $transparent #00000000
 set $regular #FDFDFD
 set $urgent #FFA500
 set $active #fac863
-bar {
-
-        font pango: FontAwesome Regular, Iosevka Regular 16px
-        i3bar_command i3bar -t
-        colors {
-          # Whole color settings
-          background $transparent
-          statusline $regular
-          separator  $regular
-
-          # Type             border  background font
-          focused_workspace  $transparent $transparent $active
-          active_workspace   $transparent $transparent $active
-          inactive_workspace $transparent $transparent $regular
-          urgent_workspace   $transparent $transparent $urgent
-          binding_mode       $transparent $transparent $regular
-        }
-        status_command SCRIPT_DIR=/usr/libexec/i3blocks i3blocks -c ~/.config/i3/i3blocks.conf
-        position top
-        workspace_buttons yes
-        tray_output LVDS-1
-        tray_output LVDS-0
-        tray_output DVI-D-0
-        tray_output DVI-I-1
-        tray_output VGA-1
-        tray_output VGA-0
-}
+#bar {
+#
+#        font pango: FontAwesome Regular, Iosevka Regular 16px
+#        colors {
+#          # Whole color settings
+#          background $transparent
+#          statusline $regular
+#          separator  $regular
+#
+#          # Type             border  background font
+#          focused_workspace  $transparent $transparent $active
+#          active_workspace   $transparent $transparent $active
+#          inactive_workspace $transparent $transparent $regular
+#          urgent_workspace   $transparent $transparent $urgent
+#          binding_mode       $transparent $transparent $regular
+#        }
+#        position top
+#        workspace_buttons yes
+#        tray_output LVDS-1
+#        tray_output LVDS-0
+#        tray_output DVI-D-0
+#        tray_output DVI-I-1
+#        tray_output VGA-1
+#        tray_output VGA-0
+#}

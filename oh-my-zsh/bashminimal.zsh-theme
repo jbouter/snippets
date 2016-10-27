@@ -1,10 +1,17 @@
-if [ $UID -eq 0 ]; then CARETCOLOR="red"; else CARETCOLOR="green"; fi
+# Based upon the mrtazz theme
 
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+if [ $UID -eq 0 ]; then 
+  CARETCOLOR="red"
+  PROMPTLOGO="#"
+else 
+  CARETCOLOR="green"
+  PROMPTLOGO="$"
+fi
 
-PROMPT='%m:%{$reset_color%}%{${fg[$CARETCOLOR]}%}%3~$(git_prompt_info)%{${reset_color}%}%# '
+PROMPT='%{$fg[$CARETCOLOR]%}%m%{$reset_color%}:%{$fg[cyan]%}%c%{$reset_color%}$PROMPTLOGO '
+RPROMPT='%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}% '
 
-RPS1="${return_code}"
-
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%} ("
-ZSH_THEME_GIT_PROMPT_SUFFIX=")%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="<%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%} %{$fg[yellow]%}✗%{$fg[green]%}>%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}>"

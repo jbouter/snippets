@@ -8,7 +8,7 @@ else
   PROMPTLOGO="$"
 fi
 
-PROMPT='%{$fg[$CARETCOLOR]%}%m%{$reset_color%}:%{$fg[cyan]%}%c%{$reset_color%}$PROMPTLOGO '
+PROMPT='%{$fg[$CARETCOLOR]%}%m%{$reset_color%}:%{$fg[cyan]%}%2~%{$reset_color%}$PROMPTLOGO '
 RPROMPT='%{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}% '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="<%{$fg[red]%}"

@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = mopidy
+
+[Action]
+Description = Restarting mopidy
+When = PostTransaction
+Exec = /usr/bin/env sh -c "systemctl restart mopidy"

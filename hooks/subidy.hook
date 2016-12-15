@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = mopidy-subidy
+
+[Action]
+Description = Restarting mopidy because subidy has been upgraded
+When = PostTransaction
+Depends = mopidy
+Exec = /usr/bin/env sh -c "systemctl restart mopidy"

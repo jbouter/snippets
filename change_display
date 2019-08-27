@@ -1,6 +1,5 @@
 #!/bin/bash
 
-MODE="$1"
 LATTE_CONFIG="$HOME/.config/latte/Plasma.layout.latte"
 CURSOR_CONFIG="$HOME/.config/kcminputrc"
 CURSOR_STARTUP_CONFIG="$HOME/.config/startupconfig"
@@ -12,18 +11,19 @@ if [ -z ${1+x} ]; then
 	exit 1
 fi
 
-if [ "$MODE" = "external" ]; then
+if [ "$1" = "external" ]; then
 	LATTE_SIZE="48"
 	CURSOR_SIZE="24"
 	SCALING="1"
 	FORCE_FONT_DPI="0"
-elif [ "$MODE" = "laptop" ]; then
+elif [ "$1" = "laptop" ]; then
 	LATTE_SIZE="96"
 	CURSOR_SIZE="48"
 	SCALING="2"
 	FORCE_FONT_DPI="192"
 else
-	echo "Usage: $0 [external|laptop]"
+	echo "$1 is not a recognised option"
+	echo "Usage: $(basename "$0") [external|laptop]"
 	exit 1
 fi
 

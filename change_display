@@ -1,0 +1,41 @@
+#!/bin/bash
+
+MODE="$1"
+LATTE_CONFIG="$HOME/.config/latte/Plasma.layout.latte"
+CURSOR_CONFIG="$HOME/.config/kcminputrc"
+CURSOR_STARTUP_CONFIG="$HOME/.config/startupconfig"
+SCALING_CONFIG="$HOME/.config/kdeglobals"
+FONT_CONFIG="$HOME/.config/kcmfonts"
+
+if [ -z ${1+x} ]; then
+	echo "Usage: $(basename "$0") [external|laptop]"
+	exit 1
+fi
+
+if [ "$MODE" = "external" ]; then
+	LATTE_SIZE="48"
+	CURSOR_SIZE="24"
+	SCALING="1"
+	FORCE_FONT_DPI="0"
+elif [ "$MODE" = "laptop" ]; then
+	LATTE_SIZE="96"
+	CURSOR_SIZE="48"
+	SCALING="2"
+	FORCE_FONT_DPI="192"
+else
+	echo "Usage: $0 [external|laptop]"
+	exit 1
+fi
+
+# Configure latte dock
+sed -i "s/iconSize=[0-9]\+/iconSize=$LATTE_SIZE/" $LATTE_CONFIG
+
+# Configure cursor scaling
+sed -i "s/cursorSize=[0-9]\+/cursorSize=$CURSOR_SIZE/" $CURSOR_CONFIG
+sed -i "s/kcminputrc_mouse_cursorsize=[0-9]\+/kcminputrc_mouse_cursorsize=$CURSOR_SIZE/" $CURSOR_STARTUP_CONFIG
+
+# Configure display scaling
+sed -i "s/ScaleFactor=[0-9]/ScaleFactor=$SCALING/" $SCALING_CONFIG
+sed -i "s/forceFontDPI=[0-9]\+/forceFontDPI=$FORCE_FONT_DPI/" $FONT_CONFIG
+
+echo "Settings changed, please log out and back in"

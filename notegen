@@ -1,0 +1,24 @@
+#!/usr/local/bin/bash
+
+if [ -z $1 ]; then
+  echo "At least one file is required"
+  echo "Usage: $(basename $0) file1.md [file2.md|file3.md]" 
+  exit 1
+fi
+
+for file in $*; do
+  if [ -f $file ]; then
+    filebase=$(echo $file | cut -f 1 -d '.')
+    filetype=$(echo $file | cut -f 2 -d '.')
+    if [ "$filetype" != "md" ]; then
+      echo "Please specify only markdown (.md) files"
+      exit 1
+    fi
+    if [ $(uname -s) == "Darwin" ]; then
+      pandoc -o $filebase.pdf $file --pdf-engine latexmk
+    else
+      pandoc -o $filebase.pdf $file
+    fi
+    pandoc -o $filebase.docx $file
+  fi
+done

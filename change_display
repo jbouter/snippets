@@ -26,7 +26,7 @@ elif [ "$1" = "laptop" ]; then
 	CURSOR_SIZE="48"
 	SCALING="2"
 	FORCE_FONT_DPI="192"
-	SCREEN_SCALE_FACTORS="eDP-1=2;DP-1=2;DP-2=2;"
+	ScreenScaleFactors="eDP-1=1.8;DP-1=1.8;DP-2=1.8;DP-3=1.8;"
 else
 	# If $1 is not either 'laptop' or 'external', throw an error
 	echo "$1 is not a recognised option"

@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 
 if [ -z $1 ]; then
   echo "At least one file is required"
@@ -14,11 +14,7 @@ for file in $*; do
       echo "Please specify only markdown (.md) files"
       exit 1
     fi
-    if [ $(uname -s) == "Darwin" ]; then
       pandoc -o $filebase.pdf $file --pdf-engine xelatex
-    else
-      pandoc -o $filebase.pdf $file
-    fi
     pandoc -o $filebase.docx $file
   fi
 done

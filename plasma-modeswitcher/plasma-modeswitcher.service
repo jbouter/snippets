@@ -1,0 +1,13 @@
+[Unit]
+Description=Plasma Modeswitcher
+After=syslog.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/plasma-modeswitcher.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

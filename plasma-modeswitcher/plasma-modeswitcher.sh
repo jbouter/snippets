@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export DISPLAY=:0
+
 LAT=""
 LON=""
 SUNTIMES=$(curl -XGET -s "https://api.sunrise-sunset.org/json?lat=$LAT&lng=$LON&formatted=0" | awk '{ split($0,a,"\""); print a[6]"\n"a[10]}')

@@ -21,9 +21,9 @@ We recommend running the service and timer as your own user, and therefore sugge
 
 ```bash
 mkdir -p ~/.local/share/systemd/user
-cp plasma-modeswitcher.service ~/.local/share/systemd/user/
-cp plasma-modeswitcher.timer ~/.local/share/systemd/user/
+cp plasma-modeswitcher.{service,timer} ~/.local/share/systemd/user/
 ```
+
 Then enable the timer:
 
 ```bash

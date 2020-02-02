@@ -15,15 +15,15 @@ export BORG_PASSCOMMAND='su -c "pass show personal/borgbackup" - username' # set
 
 # Start by mounting share through the SMB protocol
 if [ $(mount | grep -c "$SMB_DEST") -eq 0 ]; then
-	mount -t cifs //"$SMB_ADDR/$SMB_PATH" "$SMB_DEST" -ousername="$SMB_USER",password="$SMB_PASS"
-	mount_exit=$?
+  mount -t cifs //"$SMB_ADDR/$SMB_PATH" "$SMB_DEST" -ousername="$SMB_USER",password="$SMB_PASS"
+  mount_exit=$?
 
-	if [ ${mount_exit} -ne 0 ]; then
-		info "Mount failed. Aborting"
-		exit 1
-	fi
+  if [ ${mount_exit} -ne 0 ]; then
+    info "Mount failed. Aborting"
+    exit 1
+  fi
 else
-	info "Samba share already mounted"
+  info "Samba share already mounted"
 fi
 
 # some helpers and error handling:
@@ -35,23 +35,27 @@ info "Starting backup"
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
 
-borg create                                	    \
-    --verbose                              	    \
-    --filter AME                           	    \
-    --list                                 	    \
-    --stats                                	    \
-    --show-rc                              	    \
-    --compression lz4                      	    \
-    --exclude-caches                       	    \
-    --exclude '/home/*/.cache/*'           	    \
-    --exclude '/var/cache/*'               	    \
-    --exclude '/var/tmp/*'                 	    \
-                                           	    \
-    ::'{hostname}-{now}'                   	    \
-    /etc                                   	    \
-    /home                                  	    \
-    /root                                  	    \
-    /var                                   	    \
+borg create                                          \
+    --verbose                                        \
+    --filter AME                                     \
+    --list                                           \
+    --stats                                          \
+    --show-rc                                        \
+    --compression lz4                                \
+    --exclude-caches                                 \
+    --exclude '/home/*/.cache/*'                     \
+    --exclude '/var/cache/*'                         \
+    --exclude '/var/tmp/*'                           \
+    --exclude '/var/snap/*'                          \
+    --exclude '/var/lib/snapd/*'                     \
+    --exclude '/home/user/Documents/libvirt/*'       \ # Change "user" to actual username and remove this comment
+    --exclude '/home/user/.local/share/akonadi/*'    \ # Change "user" to actual username and remove this comment
+                                                     \
+    ::'{hostname}-{now}'                             \
+    /etc                                             \
+    /home                                            \
+    /root                                            \
+    /var                                             \
 
 backup_exit=$?
 

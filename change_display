@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LATTE_CONFIG="$HOME/.config/latte/Plasma.layout.latte"
+LATTE_CONFIG="$HOME/.config/latte/Default.layout.latte"
 CURSOR_CONFIG="$HOME/.config/kcminputrc"
 CURSOR_STARTUP_CONFIG="$HOME/.config/startupconfig"
 SCALING_CONFIG="$HOME/.config/kdeglobals"

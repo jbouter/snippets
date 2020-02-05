@@ -9,29 +9,29 @@ FONT_CONFIG="$HOME/.config/kcmfonts"
 
 # Check if $1 has been given
 if [ -z ${1+x} ]; then
-	echo "Usage: $(basename "$0") [external|laptop]"
-	exit 1
+  echo "Usage: $(basename "$0") [external|laptop]"
+  exit 1
 fi
 
 if [ "$1" = "external" ]; then
-	# Settings for external display
-	LATTE_SIZE="48"
-	CURSOR_SIZE="24"
-	SCALING="1"
-	FORCE_FONT_DPI="96"
-	SCREEN_SCALE_FACTORS="eDP-1=1;DP-1=1;DP-2=1;"
+  # Settings for external display
+  LATTE_SIZE="48"
+  CURSOR_SIZE="24"
+  SCALING="1"
+  FORCE_FONT_DPI="96"
+  SCREEN_SCALE_FACTORS="eDP-1=1;DP-1=1;DP-2=1;"
 elif [ "$1" = "laptop" ]; then
-	# Settings for laptop (hidpi) display
-	LATTE_SIZE="86"
-	CURSOR_SIZE="48"
-	SCALING="2"
-	FORCE_FONT_DPI="192"
-	ScreenScaleFactors="eDP-1=1.8;DP-1=1.8;DP-2=1.8;DP-3=1.8;"
+  # Settings for laptop (hidpi) display
+  LATTE_SIZE="86"
+  CURSOR_SIZE="48"
+  SCALING="2"
+  FORCE_FONT_DPI="192"
+  SCREEN_SCALE_FACTORS="eDP-1=2;DP-1=2;DP-2=2;DP-3=2;"
 else
-	# If $1 is not either 'laptop' or 'external', throw an error
-	echo "$1 is not a recognised option"
-	echo "Usage: $(basename "$0") [external|laptop]"
-	exit 1
+  # If $1 is not either 'laptop' or 'external', throw an error
+  echo "$1 is not a recognised option"
+  echo "Usage: $(basename "$0") [external|laptop]"
+  exit 1
 fi
 
 # Configure latte dock

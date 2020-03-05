@@ -15,6 +15,7 @@ if [ "$1" = "external" ]; then
   # Settings for external display
   LATTE_DOCK_SIZE="48"
   LATTE_PANEL_SIZE="18"
+  LATTE_SCREEN_EDGE_MARGIN="8"
   CURSOR_SIZE="24"
   SCALING="1"
   FORCE_FONT_DPI="96"
@@ -23,6 +24,7 @@ elif [ "$1" = "laptop" ]; then
   # Settings for laptop (hidpi) display
   LATTE_DOCK_SIZE="86"
   LATTE_PANEL_SIZE="36"
+  LATTE_SCREEN_EDGE_MARGIN="16"
   CURSOR_SIZE="48"
   SCALING="2"
   FORCE_FONT_DPI="192"
@@ -39,6 +41,7 @@ kwriteconfig5 --file $LATTE_CONFIG --group "Containments" --group "1" --group "G
 
 # Configure latte panel
 kwriteconfig5 --file $LATTE_CONFIG --group "Containments" --group "4" --group "General" --key "iconSize" "$LATTE_PANEL_SIZE"
+kwriteconfig5 --file $LATTE_CONFIG --group "Containments" --group "4" --group "General" --key "screenEdgeMargin" "$LATTE_SCREEN_EDGE_MARGIN"
 
 # Configure cursor scaling
 kwriteconfig5 --file $CURSOR_CONFIG --group "Mouse" --key "cursorSize" "$CURSOR_SIZE"

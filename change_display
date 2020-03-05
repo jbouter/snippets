@@ -2,10 +2,8 @@
 
 LATTE_CONFIG="$HOME/.config/latte/Default.layout.latte"
 CURSOR_CONFIG="$HOME/.config/kcminputrc"
-CURSOR_STARTUP_CONFIG="$HOME/.config/startupconfig"
 SCALING_CONFIG="$HOME/.config/kdeglobals"
 FONT_CONFIG="$HOME/.config/kcmfonts"
-
 
 # Check if $1 has been given
 if [ -z ${1+x} ]; then
@@ -15,14 +13,16 @@ fi
 
 if [ "$1" = "external" ]; then
   # Settings for external display
-  LATTE_SIZE="48"
+  LATTE_DOCK_SIZE="48"
+  LATTE_PANEL_SIZE="20"
   CURSOR_SIZE="24"
   SCALING="1"
   FORCE_FONT_DPI="96"
   SCREEN_SCALE_FACTORS="eDP-1=1;DP-1=1;DP-2=1;"
 elif [ "$1" = "laptop" ]; then
   # Settings for laptop (hidpi) display
-  LATTE_SIZE="86"
+  LATTE_DOCK_SIZE="86"
+  LATTE_PANEL_SIZE="40"
   CURSOR_SIZE="48"
   SCALING="2"
   FORCE_FONT_DPI="192"
@@ -35,11 +35,13 @@ else
 fi
 
 # Configure latte dock
-sed -i "s/iconSize=[0-9]\+/iconSize=$LATTE_SIZE/" $LATTE_CONFIG
+kwriteconfig5 --file $LATTE_CONFIG --group "Containments" --group "1" --group "General" --key "iconSize" "$LATTE_DOCK_SIZE"
+
+# Configure latte panel
+kwriteconfig5 --file $LATTE_CONFIG --group "Containments" --group "4" --group "General" --key "iconSize" "$LATTE_PANEL_SIZE"
 
 # Configure cursor scaling
 kwriteconfig5 --file $CURSOR_CONFIG --group "Mouse" --key "cursorSize" "$CURSOR_SIZE"
-sed -i "s/kcminputrc_mouse_cursorsize=[0-9]\+/kcminputrc_mouse_cursorsize=$CURSOR_SIZE/" $CURSOR_STARTUP_CONFIG
 
 # Configure display scaling
 kwriteconfig5 --file $SCALING_CONFIG --group "KScreen" --key "ScaleFactor" "$SCALING"

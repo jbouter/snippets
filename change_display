@@ -14,7 +14,7 @@ fi
 if [ "$1" = "external" ]; then
   # Settings for external display
   LATTE_DOCK_SIZE="48"
-  LATTE_PANEL_SIZE="20"
+  LATTE_PANEL_SIZE="18"
   CURSOR_SIZE="24"
   SCALING="1"
   FORCE_FONT_DPI="96"
@@ -22,7 +22,7 @@ if [ "$1" = "external" ]; then
 elif [ "$1" = "laptop" ]; then
   # Settings for laptop (hidpi) display
   LATTE_DOCK_SIZE="86"
-  LATTE_PANEL_SIZE="40"
+  LATTE_PANEL_SIZE="36"
   CURSOR_SIZE="48"
   SCALING="2"
   FORCE_FONT_DPI="192"

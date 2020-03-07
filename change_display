@@ -77,4 +77,6 @@ def apply_config(settings):
         'kwriteconfig5 --file {font_config} --group "General" --key "forceFontDPI" "{force_font_dpi}"'.format(**config))
 
 
-main()
+if __name__ == "__main__":
+    # execute only if run as a script
+    main()

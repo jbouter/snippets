@@ -1,54 +1,80 @@
-#!/bin/bash
+#!/usr/bin/env python3
 
-LATTE_CONFIG="$HOME/.config/latte/Default.layout.latte"
-CURSOR_CONFIG="$HOME/.config/kcminputrc"
-SCALING_CONFIG="$HOME/.config/kdeglobals"
-FONT_CONFIG="$HOME/.config/kcmfonts"
+import os
+import argparse
 
-# Check if $1 has been given
-if [ -z ${1+x} ]; then
-  echo "Usage: $(basename "$0") [external|laptop]"
-  exit 1
-fi
+HOME = os.environ['HOME']
 
-if [ "$1" = "external" ]; then
-  # Settings for external display
-  LATTE_DOCK_SIZE="48"
-  LATTE_PANEL_SIZE="18"
-  LATTE_SCREEN_EDGE_MARGIN="8"
-  CURSOR_SIZE="24"
-  SCALING="1"
-  FORCE_FONT_DPI="96"
-  SCREEN_SCALE_FACTORS="eDP-1=1;DP-1=1;DP-2=1;"
-elif [ "$1" = "laptop" ]; then
-  # Settings for laptop (hidpi) display
-  LATTE_DOCK_SIZE="86"
-  LATTE_PANEL_SIZE="36"
-  LATTE_SCREEN_EDGE_MARGIN="16"
-  CURSOR_SIZE="48"
-  SCALING="2"
-  FORCE_FONT_DPI="192"
-  SCREEN_SCALE_FACTORS="eDP-1=2;DP-1=2;DP-2=2;DP-3=2;"
-else
-  # If $1 is not either 'laptop' or 'external', throw an error
-  echo "$1 is not a recognised option"
-  echo "Usage: $(basename "$0") [external|laptop]"
-  exit 1
-fi
+paths = {
+    'latte_config': HOME + '/.config/latte/Default.layout.latte',
+    'cursor_config': HOME + '/.config/kcminputrc',
+    'scaling_config': HOME + '/.config/kdeglobals',
+    'font_config': HOME + '/.config/kcmfonts'
+}
 
-# Configure latte dock
-kwriteconfig5 --file $LATTE_CONFIG --group "Containments" --group "1" --group "General" --key "iconSize" "$LATTE_DOCK_SIZE"
+laptop_settings = {
+    # Settings for laptop (hidpi) display
+    'latte_dock_size': '86',
+    'latte_panel_size': '36',
+    'latte_screen_edge_margin': '16',
+    'cursor_size': '48',
+    'scaling': '2',
+    'force_font_dpi': '192',
+    'screen_scale_factors': 'eDP-1=2;DP-1=2;DP-2=2;DP-3=2;'
+}
 
-# Configure latte panel
-kwriteconfig5 --file $LATTE_CONFIG --group "Containments" --group "4" --group "General" --key "iconSize" "$LATTE_PANEL_SIZE"
-kwriteconfig5 --file $LATTE_CONFIG --group "Containments" --group "4" --group "General" --key "screenEdgeMargin" "$LATTE_SCREEN_EDGE_MARGIN"
+external_settings = {
+    # Settings for external display
+    'latte_dock_size': '48',
+    'latte_panel_size': '18',
+    'latte_screen_edge_margin': '8',
+    'cursor_size': '24',
+    'scaling': '1',
+    'force_font_dpi': '96',
+    'screen_scale_factors': 'eDP-1=1;DP-1=1;DP-2=1;'
+}
 
-# Configure cursor scaling
-kwriteconfig5 --file $CURSOR_CONFIG --group "Mouse" --key "cursorSize" "$CURSOR_SIZE"
 
-# Configure display scaling
-kwriteconfig5 --file $SCALING_CONFIG --group "KScreen" --key "ScaleFactor" "$SCALING"
-kwriteconfig5 --file $SCALING_CONFIG --group "KScreen" --key "ScreenScaleFactors" "$SCREEN_SCALE_FACTORS"
-kwriteconfig5 --file $FONT_CONFIG --group "General" --key "forceFontDPI" "$FORCE_FONT_DPI"
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("display", help="Define the display to target", choices=[
+                        'laptop', 'external'])
+    args = parser.parse_args()
 
-echo "Settings changed, please log out and back in"
+    if args.display == 'laptop':
+        settings = laptop_settings
+
+    if args.display == 'external':
+        settings = external_settings
+
+    apply_config(settings)
+    print('Settings applied. Please log out and back in if you\'re inside an active session')
+
+
+def apply_config(settings):
+    config = {**paths, **settings}
+
+    # Configure latte dock
+    os.system(
+        'kwriteconfig5 --file {latte_config} --group "Containments" --group "1" --group "General" --key "iconSize" "{latte_dock_size}"'.format(**config))
+
+    # Configure latte panel
+    os.system(
+        'kwriteconfig5 --file {latte_config} --group "Containments" --group "4" --group "General" --key "iconSize" "{latte_panel_size}"'.format(**config))
+    os.system(
+        'kwriteconfig5 --file {latte_config} --group "Containments" --group "4" --group "General" --key "screenEdgeMargin" "{latte_screen_edge_margin}"'.format(**config))
+
+    # Configure cursor scaling
+    os.system(
+        'kwriteconfig5 --file {cursor_config} --group "Mouse" --key "cursorSize" "{cursor_size}"'.format(**config))
+
+    # Configure display scaling
+    os.system(
+        'kwriteconfig5 --file {scaling_config} --group "KScreen" --key "ScaleFactor" "{scaling}"'.format(**config))
+    os.system(
+        'kwriteconfig5 --file {scaling_config} --group "KScreen" --key "ScreenScaleFactors" "{screen_scale_factors}"'.format(**config))
+    os.system(
+        'kwriteconfig5 --file {font_config} --group "General" --key "forceFontDPI" "{force_font_dpi}"'.format(**config))
+
+
+main()

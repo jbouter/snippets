@@ -3,6 +3,7 @@
 import os
 import argparse
 import sys
+import platform
 
 
 def check_ext(file):
@@ -19,13 +20,25 @@ def check_present(file):
     return os.path.isfile(file)
 
 
-def gen_pdf(file):
+def gen_pdf(file, verbose):
     filename = os.path.splitext(file)[0]
-    os.system('pandoc -o {}.pdf {} --pdf-engine xelatex'.format(filename, file))
+    if verbose:
+        print('[+] Converting {} to pdf...'.format(file))
+    if platform.system() == 'Darwin':
+        if verbose:
+            print('[+] Detected Mac OS')
+        os.system('pandoc -o {}.pdf {} --pdf-engine xelatex'.format(filename, file))
+    elif platform.system() == 'Linux':
+        if verbose:
+            print('[+] Detected Linux')
+        os.system(
+            'pandoc -o {}.pdf {} --latex-engine xelatex'.format(filename, file))
 
 
-def gen_docx(file):
+def gen_docx(file, verbose):
     filename = os.path.splitext(file)[0]
+    if verbose:
+        print('[+] Converting {} to docx...'.format(file))
     os.system('pandoc -o {}.docx {}'.format(filename, file))
 
 
@@ -33,8 +46,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         'file', help='name of the markdown file to use')
-    parser.add_argument('--docx', action='store_true',
+    parser.add_argument('-d', '--docx', action='store_true',
                         help='also generate a docx file')
+    parser.add_argument('-v', '--verbose', action='store_true',
+                        help='Make the output verbose')
     args = parser.parse_args()
 
     if not check_ext(args.file):
@@ -44,10 +59,10 @@ def main():
         print('Couldn\'t find {}'.format(args.file))
         sys.exit(1)
 
-    gen_pdf(args.file)
+    gen_pdf(args.file, args.verbose)
 
     if args.docx:
-        gen_docx(args.file)
+        gen_docx(args.file, args.verbose)
 
 
 if __name__ == "__main__":

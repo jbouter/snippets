@@ -1,20 +1,55 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-if [ -z $1 ]; then
-  echo "At least one file is required"
-  echo "Usage: $(basename $0) file1.md [file2.md|file3.md]" 
-  exit 1
-fi
+import os
+import argparse
+import sys
 
-for file in $*; do
-  if [ -f $file ]; then
-    filebase=$(echo $file | cut -f 1 -d '.')
-    filetype=$(echo $file | cut -f 2 -d '.')
-    if [ "$filetype" != "md" ]; then
-      echo "Please specify only markdown (.md) files"
-      exit 1
-    fi
-      pandoc -o $filebase.pdf $file --pdf-engine xelatex
-    pandoc -o $filebase.docx $file
-  fi
-done
+
+def check_ext(file):
+    extension = os.path.splitext(file)[1][1:]
+
+    if extension == 'md':
+        pass
+    else:
+        return(False)
+    return('skip')
+
+
+def check_present(file):
+    return os.path.isfile(file)
+
+
+def gen_pdf(file):
+    filename = os.path.splitext(file)[0]
+    os.system('pandoc -o {}.pdf {} --pdf-engine xelatex'.format(filename, file))
+
+
+def gen_docx(file):
+    filename = os.path.splitext(file)[0]
+    os.system('pandoc -o {}.docx {}'.format(filename, file))
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        'file', help='name of the markdown file to use')
+    parser.add_argument('--docx', action='store_true',
+                        help='also generate a docx file')
+    args = parser.parse_args()
+
+    if not check_ext(args.file):
+        print('File {} is not a markdown file'.format(args.file))
+        sys.exit(1)
+    if not check_present(args.file):
+        print('Couldn\'t find {}'.format(args.file))
+        sys.exit(1)
+
+    gen_pdf(args.file)
+
+    if args.docx:
+        gen_docx(args.file)
+
+
+if __name__ == "__main__":
+    # execute only if run as a script
+    main()

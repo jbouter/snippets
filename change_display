@@ -53,45 +53,51 @@ def main():
 
     apply_kde_config(settings)
     apply_rofi_config(settings)
-    print('Settings applied. Please log out and back in if you\'re inside an active session')
+    print('[+] Settings applied. Please log out and back in if you\'re inside an active session')
 
 
 def apply_kde_config(settings):
     config = {**paths, **settings}
 
-    # Configure latte dock
-    os.system(
-        'kwriteconfig5 --file {latte_config} --group "Containments" --group "1" --group "General" --key "iconSize" "{latte_dock_size}"'.format(**config))
+    try:
+        # Configure latte dock
+        os.system(
+            'kwriteconfig5 --file {latte_config} --group "Containments" --group "1" --group "General" --key "iconSize" "{latte_dock_size}"'.format(**config))
 
-    # Configure latte panel
-    os.system(
-        'kwriteconfig5 --file {latte_config} --group "Containments" --group "4" --group "General" --key "iconSize" "{latte_panel_size}"'.format(**config))
-    os.system(
-        'kwriteconfig5 --file {latte_config} --group "Containments" --group "4" --group "General" --key "screenEdgeMargin" "{latte_screen_edge_margin}"'.format(**config))
+        # Configure latte panel
+        os.system(
+            'kwriteconfig5 --file {latte_config} --group "Containments" --group "4" --group "General" --key "iconSize" "{latte_panel_size}"'.format(**config))
+        os.system(
+            'kwriteconfig5 --file {latte_config} --group "Containments" --group "4" --group "General" --key "screenEdgeMargin" "{latte_screen_edge_margin}"'.format(**config))
 
-    # Configure cursor scaling
-    os.system(
-        'kwriteconfig5 --file {cursor_config} --group "Mouse" --key "cursorSize" "{cursor_size}"'.format(**config))
+        # Configure cursor scaling
+        os.system(
+            'kwriteconfig5 --file {cursor_config} --group "Mouse" --key "cursorSize" "{cursor_size}"'.format(**config))
 
-    # Configure display scaling
-    os.system(
-        'kwriteconfig5 --file {scaling_config} --group "KScreen" --key "ScaleFactor" "{scaling}"'.format(**config))
-    os.system(
-        'kwriteconfig5 --file {scaling_config} --group "KScreen" --key "ScreenScaleFactors" "{screen_scale_factors}"'.format(**config))
-    os.system(
-        'kwriteconfig5 --file {font_config} --group "General" --key "forceFontDPI" "{force_font_dpi}"'.format(**config))
+        # Configure display scaling
+        os.system(
+            'kwriteconfig5 --file {scaling_config} --group "KScreen" --key "ScaleFactor" "{scaling}"'.format(**config))
+        os.system(
+            'kwriteconfig5 --file {scaling_config} --group "KScreen" --key "ScreenScaleFactors" "{screen_scale_factors}"'.format(**config))
+        os.system(
+            'kwriteconfig5 --file {font_config} --group "General" --key "forceFontDPI" "{force_font_dpi}"'.format(**config))
+    except:
+        print('[!] kwriteconfit5 broke. Please investigate.')
 
 
 def apply_rofi_config(settings):
     # Configure rofi settings
     config = {**paths, **settings}
 
-    with open(config['rofi_config'], 'r') as f:
-        lines = f.readlines()
-    with open(config['rofi_config'], 'w') as f:
-        for line in lines:
-            f.write(re.sub(
-                r'Noto Sans [0-9][0-9]', 'Noto Sans {rofi_fontsize}'.format(**config), line))
+    try:
+        with open(config['rofi_config'], 'r') as f:
+            lines = f.readlines()
+        with open(config['rofi_config'], 'w') as f:
+            for line in lines:
+                f.write(re.sub(
+                    r'Noto Sans [0-9][0-9]', 'Noto Sans {rofi_fontsize}'.format(**config), line))
+    except:
+        print('[!] Couldn\'t read or write rofi config. Please investigate.')
 
 
 if __name__ == "__main__":

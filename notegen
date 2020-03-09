@@ -29,7 +29,7 @@ def gen_pdf(file, verbose):
             os.system(
                 'pandoc -o {}.pdf {} --pdf-engine xelatex'.format(filename, file))
         except:
-            print('[+] Pandoc broke')
+            print('[!] Pandoc broke')
     elif platform.system() == 'Linux':
         if verbose:
             print('[+] Detected Linux')
@@ -37,7 +37,7 @@ def gen_pdf(file, verbose):
             os.system(
                 'pandoc -o {}.pdf {} --latex-engine xelatex'.format(filename, file))
         except:
-            print('[+] Pandoc broke')
+            print('[!] Pandoc broke')
 
 
 def gen_docx(file, verbose):
@@ -47,7 +47,7 @@ def gen_docx(file, verbose):
     try:
         os.system('pandoc -o {}.docx {}'.format(filename, file))
     except:
-        print('[+] Pandoc broke')
+        print('[!] Pandoc broke')
 
 
 def main():

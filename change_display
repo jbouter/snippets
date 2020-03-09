@@ -2,6 +2,7 @@
 
 import os
 import argparse
+import re
 
 HOME = os.environ['HOME']
 
@@ -9,7 +10,8 @@ paths = {
     'latte_config': HOME + '/.config/latte/Default.layout.latte',
     'cursor_config': HOME + '/.config/kcminputrc',
     'scaling_config': HOME + '/.config/kdeglobals',
-    'font_config': HOME + '/.config/kcmfonts'
+    'font_config': HOME + '/.config/kcmfonts',
+    'rofi_config': HOME + '/.config/rofi/config.rasi'
 }
 
 laptop_settings = {
@@ -20,7 +22,8 @@ laptop_settings = {
     'cursor_size': '48',
     'scaling': '2',
     'force_font_dpi': '192',
-    'screen_scale_factors': 'eDP-1=2;DP-1=2;DP-2=2;DP-3=2;'
+    'screen_scale_factors': 'eDP-1=2;DP-1=2;DP-2=2;DP-3=2;',
+    'rofi_fontsize': '20'
 }
 
 external_settings = {
@@ -31,7 +34,8 @@ external_settings = {
     'cursor_size': '24',
     'scaling': '1',
     'force_font_dpi': '96',
-    'screen_scale_factors': 'eDP-1=1;DP-1=1;DP-2=1;'
+    'screen_scale_factors': 'eDP-1=1;DP-1=1;DP-2=1;',
+    'rofi_fontsize': '10'
 }
 
 
@@ -47,11 +51,12 @@ def main():
     if args.display == 'external':
         settings = external_settings
 
-    apply_config(settings)
+    apply_kde_config(settings)
+    apply_rofi_config(settings)
     print('Settings applied. Please log out and back in if you\'re inside an active session')
 
 
-def apply_config(settings):
+def apply_kde_config(settings):
     config = {**paths, **settings}
 
     # Configure latte dock
@@ -75,6 +80,18 @@ def apply_config(settings):
         'kwriteconfig5 --file {scaling_config} --group "KScreen" --key "ScreenScaleFactors" "{screen_scale_factors}"'.format(**config))
     os.system(
         'kwriteconfig5 --file {font_config} --group "General" --key "forceFontDPI" "{force_font_dpi}"'.format(**config))
+
+
+def apply_rofi_config(settings):
+    # Configure rofi settings
+    config = {**paths, **settings}
+
+    with open(config['rofi_config'], 'r') as f:
+        lines = f.readlines()
+    with open(config['rofi_config'], 'w') as f:
+        for line in lines:
+            f.write(re.sub(
+                r'Noto Sans [0-9][0-9]', 'Noto Sans {rofi_fontsize}'.format(**config), line))
 
 
 if __name__ == "__main__":

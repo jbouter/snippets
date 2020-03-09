@@ -10,10 +10,7 @@ def check_ext(file):
     extension = os.path.splitext(file)[1][1:]
 
     if extension == 'md':
-        pass
-    else:
-        return(False)
-    return('skip')
+        return True
 
 
 def check_present(file):
@@ -24,22 +21,33 @@ def gen_pdf(file, verbose):
     filename = os.path.splitext(file)[0]
     if verbose:
         print('[+] Converting {} to pdf...'.format(file))
+
     if platform.system() == 'Darwin':
         if verbose:
             print('[+] Detected Mac OS')
-        os.system('pandoc -o {}.pdf {} --pdf-engine xelatex'.format(filename, file))
+        try:
+            os.system(
+                'pandoc -o {}.pdf {} --pdf-engine xelatex'.format(filename, file))
+        except:
+            print('[+] Pandoc broke')
     elif platform.system() == 'Linux':
         if verbose:
             print('[+] Detected Linux')
-        os.system(
-            'pandoc -o {}.pdf {} --latex-engine xelatex'.format(filename, file))
+        try:
+            os.system(
+                'pandoc -o {}.pdf {} --latex-engine xelatex'.format(filename, file))
+        except:
+            print('[+] Pandoc broke')
 
 
 def gen_docx(file, verbose):
     filename = os.path.splitext(file)[0]
     if verbose:
         print('[+] Converting {} to docx...'.format(file))
-    os.system('pandoc -o {}.docx {}'.format(filename, file))
+    try:
+        os.system('pandoc -o {}.docx {}'.format(filename, file))
+    except:
+        print('[+] Pandoc broke')
 
 
 def main():

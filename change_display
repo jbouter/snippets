@@ -16,8 +16,7 @@ paths = {
 
 laptop_settings = {
     # Settings for laptop (hidpi) display
-    'latte_dock_size': '86',
-    'latte_panel_size': '36',
+    'latte_panel_size': '64',
     'latte_screen_edge_margin': '16',
     'cursor_size': '48',
     'scaling': '2',
@@ -28,8 +27,7 @@ laptop_settings = {
 
 external_settings = {
     # Settings for external display
-    'latte_dock_size': '48',
-    'latte_panel_size': '18',
+    'latte_panel_size': '32',
     'latte_screen_edge_margin': '8',
     'cursor_size': '24',
     'scaling': '1',
@@ -60,15 +58,11 @@ def apply_kde_config(settings):
     config = {**paths, **settings}
 
     try:
-        # Configure latte dock
-        os.system(
-            'kwriteconfig5 --file {latte_config} --group "Containments" --group "1" --group "General" --key "iconSize" "{latte_dock_size}"'.format(**config))
-
         # Configure latte panel
         os.system(
-            'kwriteconfig5 --file {latte_config} --group "Containments" --group "4" --group "General" --key "iconSize" "{latte_panel_size}"'.format(**config))
+            'kwriteconfig5 --file {latte_config} --group "Containments" --group "1" --group "General" --key "iconSize" "{latte_panel_size}"'.format(**config))
         os.system(
-            'kwriteconfig5 --file {latte_config} --group "Containments" --group "4" --group "General" --key "screenEdgeMargin" "{latte_screen_edge_margin}"'.format(**config))
+            'kwriteconfig5 --file {latte_config} --group "Containments" --group "1" --group "General" --key "screenEdgeMargin" "{latte_screen_edge_margin}"'.format(**config))
 
         # Configure cursor scaling
         os.system(

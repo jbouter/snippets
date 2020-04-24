@@ -12,3 +12,5 @@ git config --global alias.tree "log --graph --pretty=format:'%Cred%h%Creset -%C(
 
 * Install eisvogel as documented on [roaldnefs/writeup-template](https://github.com/roaldnefs/writeup-template)
 * Built for the latest version of pandoc, with support for `--pdf-engine` instead of `--latex-engine`
+
+Eisvogel documentation can be found on [GitHub](https://github.com/Wandmalfarbe/pandoc-latex-template)

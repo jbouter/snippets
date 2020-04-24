@@ -7,3 +7,8 @@ run:
 ```bash
 git config --global alias.tree "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --branches --date-order"
 ```
+
+## Notegen requirements
+
+* Install eisvogel as documented on [roaldnefs/writeup-template](https://github.com/roaldnefs/writeup-template)
+* Built for the latest version of pandoc, with support for `--pdf-engine` instead of `--latex-engine`

@@ -30,6 +30,7 @@ Enable and start the systemd timer.
 cp borgbackup.sh /usr/local/sbin/
 vim /usr/local/sbin/borgbackup.sh
 chmod 0755 /usr/local/sbin/borgbackup.sh
+chown root: /usr/local/sbin/borgbackup.sh
 cp borgbackup.{service,timer} /etc/systemd/system/
 systemctl daemon-reload
 systemctl enable --now borgbackup.timer

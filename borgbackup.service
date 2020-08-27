@@ -1,0 +1,11 @@
+[Unit]
+Description=Backup using Borg
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+ExecStart=/usr/local/sbin/borgbackup.sh
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

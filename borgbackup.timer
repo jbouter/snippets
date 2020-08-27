@@ -1,0 +1,11 @@
+[Unit]
+Description=Run borgbackup every day
+
+[Timer]
+Persistent=true
+OnBootSec=80
+OnCalendar=20:00
+Unit=borgbackup.service
+
+[Install]
+WantedBy=timers.target

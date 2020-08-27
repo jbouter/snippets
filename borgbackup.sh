@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Samba Configuration
 SMB_ADDR=192.168.1.1 # IP/Hostname

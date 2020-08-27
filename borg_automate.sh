@@ -5,7 +5,7 @@ SMB_ADDR=192.168.1.1 # IP/Hostname
 SMB_PATH=/path/on/share # Path inside SMB share
 SMB_DEST=/mnt/smb-backup # Local mount point
 SMB_USER=username # SMB Username
-SMB_PASS=password # SMB Password
+SMB_PASS="$(sudo -u username bash -c 'pass show personal/sambapassword')" # set 'username' to your own username, and change the pass command to fit your needs
 
 # Test if we can reach the destination server. If not, abort
 if [[ $(ping -c 3 "$SMB_ADDR" | grep 'icmp_seq') ]]; then
@@ -19,7 +19,7 @@ fi
 # Setting this, so the repo does not need to be given on the commandline:
 export BORG_REPO="$SMB_DEST"/borg
 # Ask an external program (pass) to supply the passphrase:
-export BORG_PASSCOMMAND='su -c "pass show personal/borgbackup" - username' # set 'username' to your own username, obviously update the pass command to fit your needs
+export BORG_PASSCOMMAND="sudo -u username bash -c 'pass show personal/borgbackup'" # set 'username' to your own username, obviously update the pass command to fit your needs
 
 # Start by mounting share through the SMB protocol
 if [ $(mount | grep -c "$SMB_DEST") -eq 0 ]; then

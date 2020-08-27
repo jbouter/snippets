@@ -7,6 +7,14 @@ SMB_DEST=/mnt/smb-backup # Local mount point
 SMB_USER=username # SMB Username
 SMB_PASS=password # SMB Password
 
+# Test if we can reach the destination server. If not, abort
+if [[ $(ping -c 3 "$SMB_ADDR" | grep 'icmp_seq') ]]; then
+  info "Ping succesful"
+else
+  info "Can't ping destination host. Aborting"
+  exit 1
+fi
+
 # Borg configuration
 # Setting this, so the repo does not need to be given on the commandline:
 export BORG_REPO="$SMB_DEST"/borg
